@@ -1,0 +1,392 @@
+{
+    "namespace": "minerain_common",
+    "play_toggle_base@settings_common.section_toggle_base": {
+        "$toggle_group_default_selected": 0,
+        "$button_type_panel": "minerain_common.play_toggle_button_control"
+    },
+    "screen_clips_children": {
+        "type": "panel",
+        "offset": "$clips_offset",
+        "$image_offset|default": "none",
+        "$clips_offset|default": "none",
+        "$not_gaussian_blur|default": false,
+        "$image_texture|default": "textures/MineRain/screen_background_Gaussian_Blur",
+        "clips_children": true,
+        "variables": [
+            {
+                "requires": "$not_gaussian_blur",
+                "$image_texture": "textures/MineRain/screen_background"
+            }
+        ],
+        "controls": [
+            {
+                "clips_children@minerain_common.image": {
+                    "texture": "$image_texture",
+                    "offset": "$image_offset",
+                    "clips_children": true,
+                    "fill": true,
+                    "layer": -2
+                }
+            }
+        ]
+    },
+    "play_toggle_button_control": {
+        "type": "panel",
+        "$glyph_offset|default": [
+            5,
+            0
+        ],
+        "$content_alpha": 1,
+        "$glyph_anchor_from|default": "left_middle",
+        "$glyph_anchor_to|default": "left_middle",
+        "$button_label_offset|default": [
+            34,
+            0
+        ],
+        "layer": 2,
+        "controls": [
+            {
+                "button_num@minerain_common.button_num": {
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "offset": [
+                        -11,
+                        0
+                    ]
+                }
+            },
+            {
+                "toggle_button_on_blue@minerain_common.image": {
+                    "texture": "textures/MineRain/blue_hover",
+                    "size": [
+                        "2px",
+                        "100%"
+                    ],
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "visible": "($new_ui_button_texture = $pressed_no_hover_texture or $new_ui_button_texture = $hover_texture)"
+                }
+            },
+            {
+                "glyph": {
+                    "type": "image",
+                    "anchor_from": "$glyph_anchor_from",
+                    "anchor_to": "$glyph_anchor_to",
+                    "offset": "$glyph_offset",
+                    "texture": "$glyph_texture",
+                    "size": "$glyph_size",
+                    "layer": 3,
+                    "color": "$glyph_color",
+                    "alpha": 1,
+                    "$glyph_bindings|default": [],
+                    "bindings": "$glyph_bindings"
+                }
+            },
+            {
+                "glyph_color": {
+                    "type": "image",
+                    "anchor_from": "$glyph_anchor_from",
+                    "anchor_to": "$glyph_anchor_to",
+                    "offset": "$glyph_offset",
+                    "texture": "$glyph_color_texture",
+                    "size": "$glyph_size",
+                    "layer": 4,
+                    "alpha": 1,
+                    "$glyph_color_bindings|default": [],
+                    "bindings": "$glyph_color_bindings"
+                }
+            },
+            {
+                "progress_loading_bars@progress.progress_loading_bars": {
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "color": "$glyph_color",
+                    "offset": [
+                        5,
+                        0
+                    ],
+                    "layer": 5,
+                    "size": "$glyph_size",
+                    "visible": false,
+                    "$glyph_progress_bindings|default": [],
+                    "bindings": "$glyph_progress_bindings"
+                }
+            },
+            {
+                "tab_button_text": {
+                    "type": "label",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "size": [
+                        "100%-38px",
+                        "default"
+                    ],
+                    "max_size": [
+                        "100%-38px",
+                        "100%-4px"
+                    ],
+                    "offset": "$button_label_offset",
+                    "text": "$button_text",
+                    "font_type": "$default_font",
+                    "layer": 3,
+                    "color": "$text_color",
+                    "alpha": 1,
+                    "$button_text_binding_type|default": "none",
+                    "$button_text_grid_collection_name|default": "none",
+                    "$button_text_binding_condition|default": "none",
+                    "bindings": [
+                        {
+                            "binding_type": "$button_text_binding_type",
+                            "binding_condition": "$button_text_binding_condition",
+                            "binding_collection_name": "$button_text_grid_collection_name",
+                            "binding_name": "$button_text",
+                            "binding_name_override": "$button_text"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "button_num": {
+        "type": "panel",
+        "size": [
+            "100%c+3px",
+            "100%c+2px"
+        ],
+        "controls": [
+            {
+                "count_section_play@minerain_common.count_section_play": {}
+            }
+        ]
+    },
+    "count_section_play@play.common_button_text": {
+        "layer": 1,
+        "offset": [
+            0,
+            0
+        ],
+        "text": "$count_text_name",
+        "color": "$text_color",
+        "font_type": "$default_font",
+        "bindings": [
+            {
+                "binding_name": "$count_text_name"
+            }
+        ]
+    },
+    "image": {
+        "type": "image"
+    },
+    "screen_background@minerain_common.image": {
+        "texture": "textures/MineRain/screen_background",
+        "fill": true,
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "layer": -10
+    },
+    "rgb_image_mingli": {
+        "type": "image",
+        "layer": 0,
+        "fill": true,
+        "texture": "textures/MineRain/rgb_image",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "uv_size": [
+            1,
+            1
+        ],
+        "uv": "@minerain_common.rgb_image"
+    },
+    "rgb_image": {
+        "anim_type": "flip_book",
+        "initial_uv": [
+            0,
+            0
+        ],
+        "frame_count": 2480,
+        "frame_step": 2480,
+        "fps": 512,
+        "reversible": false,
+        "easing": "linear"
+    },
+    "back_top_bar@common.button": {
+        "layer": 100,
+        "sound_name": "random.click",
+        "sound_volume": 1.0,
+        "sound_pitch": 1.0,
+        "locked_control": "pressed",
+        "size": [
+            35,
+            16
+        ],
+        "$default_texture_color|default": [
+            0.1,
+            0.1,
+            0.1
+        ],
+        "$default_text_color|default": [
+            0.1,
+            0.1,
+            0.1
+        ],
+        "$pressed_texture_color|default": [
+            0.86,
+            0.86,
+            0.86
+        ],
+        "$pressed_text_color|default": [
+            0.9,
+            0.9,
+            0.9
+        ],
+        "$is_bg_black|default": false,
+        "$arrow_offset|default": [
+            0,
+            0
+        ],
+        "variables": [
+            {
+                "requires": "$is_bg_black",
+                "$default_texture_color": [
+                    1,
+                    1,
+                    1
+                ],
+                "$default_text_color": [
+                    1,
+                    1,
+                    1
+                ],
+                "$pressed_texture_color": [
+                    0,
+                    0,
+                    0
+                ],
+                "$pressed_text_color": [
+                    0,
+                    0,
+                    0
+                ],
+                "$button_texture": "textures/MineRain/white"
+            },
+            {
+                "requires": "$win10_edition",
+                "$arrow_offset": [
+                    0,
+                    0
+                ]
+            }
+        ],
+        "$button_texture|default": "textures/MineRain/black",
+        "$anchor|default": "left_middle",
+        "anchor_from": "$anchor",
+        "anchor_to": "$anchor",
+        "default_control": "default",
+        "hover_control": "hover",
+        "$pressed_button_name": "button.menu_exit",
+        "pressed_control": "pressed",
+        "controls": [
+            {
+                "default@minerain_common.back_top_bar_button": {}
+            },
+            {
+                "hover@minerain_common.back_top_bar_button_pressed": {}
+            },
+            {
+                "pressed@minerain_common.back_top_bar_button_pressed": {}
+            }
+        ]
+    },
+    "back_top_bar_button_pressed@minerain_common.back_top_bar_button": {
+        "$alpha": 0.5,
+        "$texture_color": "$pressed_texture_color",
+        "$text_color": "$pressed_text_color"
+    },
+    "back_top_bar_button": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$texture_color": "$default_texture_color",
+        "$text_color": "$default_text_color",
+        "controls": [
+            {
+                "back_top_bar_button_twro@minerain_common.back_top_bar_button_twro": {}
+            },
+            {
+                "back_top_bar_button_twro_woks@minerain_common.back_top_bar_button_yushe": {}
+            }
+        ]
+    },
+    "back_top_bar_button_twro": {
+        "type": "image",
+        "layer": 100,
+        "texture": "$button_texture",
+        "alpha": "$alpha",
+        "$alpha|default": 0.0
+    },
+    "back_top_bar_button_yushe": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "orientation": "horizontal",
+        "controls": [
+            {
+                "image": {
+                    "type": "panel",
+                    "size": [
+                        "10px",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "icon": {
+                                "type": "image",
+                                "texture": "textures/MineRain/back_top_left_arrow",
+                                "size": [
+                                    3,
+                                    5
+                                ],
+                                "offset": "$arrow_offset",
+                                "layer": 105,
+                                "color": "$texture_color"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "text": {
+                    "type": "panel",
+                    "size": [
+                        "100%c",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "text": {
+                                "type": "label",
+                                "text": "accessibility.button.back",
+                                "$anchor": "left_middle",
+                                "anchor_from": "$anchor",
+                                "anchor_to": "$anchor",
+                                "font_type": "$default_font",
+                                "layer": 105,
+                                "color": "$text_color"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

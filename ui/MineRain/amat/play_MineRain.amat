@@ -1,0 +1,693 @@
+{
+    "namespace": "play_minerain",
+    "screen_exit_animation_push_alpha": {
+        "anim_type": "alpha",
+        "easing": "out_cubic",
+        "duration": 0.2,
+        "from": 1.0,
+        "to": 0.0,
+        "play_event": "screen.exit_pop",
+        "end_event": "screen.exit_end"
+    },
+    "screen_entrance_animation_push_alpha": {
+        "anim_type": "alpha",
+        "easing": "in_quint",
+        "duration": 0.3,
+        "from": 0.0,
+        "to": 1.0,
+        "play_event": "screen.entrance_push",
+        "end_event": "screen.entrance_end"
+    },
+    "screen_entrance_animation_push_size": {
+        "anim_type": "size",
+        "easing": "out_cubic",
+        "duration": 0.7,
+        "from": [
+            0,
+            "100%"
+        ],
+        "to": [
+            "100%",
+            "100%"
+        ],
+        "play_event": "screen.entrance_push",
+        "end_event": "screen.entrance_end"
+    },
+    "screen_exit_animation_push_size": {
+        "anim_type": "size",
+        "easing": "out_cubic",
+        "duration": 0.4,
+        "from": [
+            "100%",
+            "100%"
+        ],
+        "to": [
+            0,
+            "100%"
+        ],
+        "play_event": "screen.exit_pop",
+        "end_event": "screen.exit_end"
+    },
+    "section_divider": {
+        "type": "panel",
+        "size": [
+            "4px",
+            "100%"
+        ]
+    },
+    "screen_background": {
+        "type": "panel",
+        "controls": [
+            {
+                "play_background@minerain_common.screen_background": {
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "offset": [
+                        0,
+                        0
+                    ],
+                    "size": [
+                        "100%-1px",
+                        "100%"
+                    ]
+                }
+            },
+            {
+                "screen_background_blur_one_left@play_minerain.screen_background_blur_one_left": {
+                    "layer": -1
+                }
+            },
+            {
+                "screen_background_blur_top_fill@play_minerain.screen_background_blur_top_fill": {
+                    "layer": -2
+                }
+            },
+            {
+                "screen_background_blur_two_left@play_minerain.screen_background_blur_two_left": {
+                    "layer": -5
+                }
+            },
+            {
+                "screen_background_black": {
+                    "type": "image",
+                    "layer": -4,
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "texture": "textures/MineRain/black",
+                    "size": [
+                        "58.39%+4px",
+                        "100%"
+                    ],
+                    "offset": [
+                        1,
+                        0
+                    ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "server_button_toggle",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "alpha": 0.2689
+                }
+            }
+        ]
+    },
+    "screen_background_blur_one_left@minerain_common.screen_clips_children": {
+        "$clips_offset": [
+            "-73%+2px",
+            "-0%"
+        ],
+        "$image_offset": [
+            "73%-2px",
+            "0%"
+        ]
+    },
+    "screen_background_blur_two_left@minerain_common.screen_clips_children": {
+        "$clips_offset": [
+            "-41.61%+4px",
+            "-0%"
+        ],
+        "$image_offset": [
+            "41.61%-4px",
+            "0%"
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "server_button_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "screen_background_blur_top_fill@minerain_common.screen_clips_children": {
+        "$clips_offset": [
+            "-0%",
+            "-100%+23px"
+        ],
+        "$image_offset": [
+            "0%",
+            "100%-23px"
+        ]
+    },
+    "mingli_text": {
+        "type": "label",
+        "size": "large",
+        "text": "mingli",
+        "font_scale_factor": 1,
+        "color": "yellow",
+        "font_type": "MinecraftTen",
+        "layer": 4
+    },
+    "play_screen_content": {
+        "type": "panel",
+        "controls": [
+            {
+                "store_top_bar@common_store.store_top_bar": {
+                    "controls": [
+                        {
+                            "play_screen_title_left@play_minerain.play_screen_title_left": {}
+                        },
+                        {
+                            "play_screen_title_right@play_minerain.play_screen_title_right": {}
+                        },
+                        {
+                            "back_button@minerain_common.back_top_bar": {
+                                "$is_bg_black": true,
+                                "offset": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "popup_dialog_factory": {
+                    "type": "factory",
+                    "control_ids": {
+                        "join_by_code": "@play.popup_dialog_join_by_code",
+                        "high_ping_warning": "@play.popup_dialog_high_ping"
+                    }
+                }
+            },
+            {
+                "screen_background@play_minerain.screen_background": {}
+            },
+            {
+                "play_content_panel_all": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "100%-23px"
+                    ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "controls": [
+                        {
+                            "play_content_panel@play_minerain.play_content_panel": {}
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "play_screen_title_left": {
+        "type": "panel",
+        "size": [
+            "27%",
+            "100%c"
+        ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "controls": [
+            {
+                "play_screen_title_label@play_minerain.play_screen_title_label": {}
+            }
+        ]
+    },
+    "play_screen_title_right": {
+        "type": "panel",
+        "size": [
+            "73%",
+            "100%c"
+        ],
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "controls": [
+            {
+                "section_title_label_play_world@play_minerain.section_title_label": {
+                    "$section_title_label": "selectWorld.tab.worlds",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "world_button_toggle",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "section_title_label_friends@play_minerain.section_title_label": {
+                    "$section_title_label": "selectWorld.tab.friends",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "friends_button_toggle",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "section_title_label_severs@play_minerain.section_title_label": {
+                    "$section_title_label": "selectWorld.tab.thirdParty",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "server_button_toggle",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "play_screen_title_label": {
+        "font_type": "$default_font",
+        "type": "label",
+        "text": "menu.play",
+        "layer": 61
+    },
+    "section_title_label": {
+        "font_type": "$default_font",
+        "type": "label",
+        "layer": 61,
+        "text": "$section_title_label"
+    },
+    "play_content_panel": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "left_side": {
+                    "type": "panel",
+                    "size": [
+                        "27%",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "left@play_minerain.left_side_content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "middle_side@play_minerain.section_divider": {}
+            },
+            {
+                "right_side": {
+                    "type": "panel",
+                    "size": [
+                        "fill",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "server_section@play_minerain.server_section": {}
+                        },
+                        {
+                            "right@play_minerain.right_side_content": {}
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "left_right_crolling_panel_common@common.scrolling_panel": {
+        "$show_background": false,
+        "$scroll_bar_left_padding_size": [
+            1,
+            0
+        ]
+    },
+    "fill": {
+        "type": "panel",
+        "size": [
+            2,
+            2
+        ]
+    },
+    "left_side_content": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "fill_w@play_minerain.fill": {}
+            },
+            {
+                "world_button@play_minerain.world_button": {}
+            },
+            {
+                "fill_f@play_minerain.fill": {}
+            },
+            {
+                "friends_button@play_minerain.friends_button": {}
+            },
+            {
+                "fill_s@play_minerain.fill": {}
+            },
+            {
+                "server_button@play_minerain.server_button": {}
+            },
+            {
+                "fill_s_y@play_minerain.fill": {
+                    "size": [
+                        "100%",
+                        "fill"
+                    ]
+                }
+            },
+            {
+                "quick_play@play_minerain.quick_play_button_stack_panel": {}
+            }
+        ]
+    },
+    "quick_play_button_stack_panel": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "controls": [
+            {
+                "quick_play_button@play_minerain.quick_play_button": {}
+            },
+            {
+                "fill_s@play_minerain.fill": {}
+            },
+            {
+                "back_button@play_minerain.quick_play_button": {
+                    "$pressed_button_name": "button.menu_exit",
+                    "$button_text": "accessibility.button.back"
+                }
+            }
+        ]
+    },
+    "quick_play_button@common_buttons.light_text_button": {
+        "$pressed_button_name": "button.menu_quick_play",
+        "$button_text": "menu.quickplay",
+        "size": [
+            "100%",
+            30
+        ],
+        "layer": 1
+    },
+    "right_side_content": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "world_section@play_minerain.world_section_scroll": {
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "world_button_toggle",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "friends_section@play_minerain.friends_section_scroll": {
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "friends_button_toggle",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "world_section_scroll@play_minerain.left_right_crolling_panel_common": {
+        "$scrolling_content": "play_minerain.world_section"
+    },
+    "friends_section_scroll@play_minerain.left_right_crolling_panel_common": {
+        "$scrolling_content": "play_minerain.friends_section"
+    },
+    "world_button@minerain_common.play_toggle_base": {
+        "$toggle_view_binding_name": "world_button_toggle",
+        "$glyph_texture": "textures/MineRain/worlds_glyph",
+        "$glyph_color_texture": "textures/MineRain/worlds",
+        "$glyph_size": [
+            18,
+            18
+        ],
+        "$toggle_group_forced_index": 0,
+        "$count_text_name": "#world_item_count",
+        "$button_text": "selectWorld.tab.worlds",
+        "$toggle_property_bag": {
+            "#panel_title": "selectWorld.tab.worlds"
+        }
+    },
+    "world_section": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "controls": [
+            {
+                "worlds_stack_panel@play.worlds_stack_panel": {}
+            }
+        ]
+    },
+    "friends_button@minerain_common.play_toggle_base": {
+        "$count_text_name": "#friend_world_item_count",
+        "$toggle_view_binding_name": "friends_button_toggle",
+        "$glyph_texture": "textures/MineRain/friends_glyph",
+        "$glyph_color_texture": "textures/MineRain/friends",
+        "$glyph_size": [
+            18,
+            18
+        ],
+        "$toggle_group_forced_index": 1,
+        "$button_text": "selectWorld.tab.friends",
+        "$toggle_property_bag": {
+            "#panel_title": "selectWorld.tab.friends"
+        }
+    },
+    "friends_section": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "controls": [
+            {
+                "friends_scroll_panel@play.friends_scroll_panel": {}
+            }
+        ]
+    },
+    "server_button@minerain_common.play_toggle_base": {
+        "$count_text_name": "#server_world_item_count",
+        "$toggle_view_binding_name": "server_button_toggle",
+        "$glyph_texture": "textures/MineRain/servers_glyph",
+        "$glyph_color_texture": "textures/MineRain/servers",
+        "$glyph_size": [
+            18,
+            18
+        ],
+        "$toggle_group_forced_index": 2,
+        "$button_text": "selectWorld.tab.thirdParty",
+        "$toggle_property_bag": {
+            "#panel_title": "selectWorld.tab.thirdParty"
+        }
+    },
+    "server_section": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "server_button_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "left_sever": {
+                    "type": "panel",
+                    "size": [
+                        "43%",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "left_sever@play_minerain.left_sever": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "middle_side@section_divider": {}
+            },
+            {
+                "right_sever": {
+                    "type": "panel",
+                    "size": [
+                        "fill",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "right_sever@play_minerain.server_content_area": {}
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "left_sever@play_minerain.left_right_crolling_panel_common": {
+        "$scrolling_content": "play_minerain.server_section_left"
+    },
+    "right_sever@play_minerain.left_right_crolling_panel_common": {
+        "$scrolling_content": "play_minerain.server_section_right"
+    },
+    "server_section_left": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "controls": [
+            {
+                "server_scroll_panel@play.server_scroll_panel": {
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ]
+                }
+            }
+        ]
+    },
+    "server_section_right": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "controls": [
+            {
+                "server_scroll_panel_right@play.third_party_server_info_panel": {
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ]
+                }
+            }
+        ]
+    },
+    "server_content_area": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "layer": 1,
+        "$focus_id": "right_side",
+        "bindings": [
+            {
+                "binding_name": "#is_network_available_and_multiplayer_visible",
+                "binding_name_override": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "third_party_scrolling_panel@play.scrolling_offsets": {
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "offset": [
+                        0,
+                        0
+                    ],
+                    "layer": 1,
+                    "$scrolling_content": "play.third_party_server_info_panel",
+                    "bindings": [
+                        {
+                            "binding_name": "#is_third_party_server_selected",
+                            "binding_name_override": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "additional_server_scrolling_panel@play.scrolling_offsets": {
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "offset": [
+                        0,
+                        0
+                    ],
+                    "layer": 1,
+                    "$scrolling_content": "play.additional_server_info_panel",
+                    "bindings": [
+                        {
+                            "binding_name": "#is_additional_server_selected",
+                            "binding_name_override": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "add_server_pane@play.add_server_info_panel": {
+                    "bindings": [
+                        {
+                            "binding_name": "#add_server_info_visible",
+                            "binding_name_override": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
