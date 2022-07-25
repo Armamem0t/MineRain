@@ -18,9 +18,12 @@
 ## BilBil
 - Tap here >https://space.bilibili.com/1013220371
 
+## E-mail
+- Armament@email.cn
+- minglipro@163.com
+
 ## agreement
 - abide by Chinese duanxie convention
 
 ## Download
 - Tap here >https://github.com/Armamem0t/MineRain/releases
-
