@@ -1,0 +1,8 @@
+{
+  "ui_defs": [//custom ui JavaScript Object Notation .amat @mingli
+    "ui/MineRain/amat/MineRain_template.amat",
+    "ui/MineRain/amat/MineRain_common.amat",
+    "ui/MineRain/amat/minerain_section.amat",
+    "ui/MineRain/amat/play_MineRain.amat"
+  ]
+}
