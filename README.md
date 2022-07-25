@@ -15,8 +15,12 @@
 - Windows 10+
 - iOS 12+
 
+## BilBil
+- Tap here >https://space.bilibili.com/1013220371
+
 ## agreement
 - abide by Chinese duanxie convention
 
 ## Download
 - Tap here >https://github.com/Armamem0t/MineRain/releases
+
