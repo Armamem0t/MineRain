@@ -1,5 +1,22 @@
 # MineRain
 
-This is a Minecraft:Bedrock_Edition pack
+- This is a Minecraft:Bedrock_Edition pack
 
-Supported operating systems: iOS   MacOS  Windows_10  Android  NXOS  Play_Station_4OS
+## Supported operating systems
+- iOS
+- MacOS
+- Windows 10
+- Android
+- NXOS
+- Play_Station_4OS
+
+## Requirements
+- Android 10+
+- Windows 10+
+- iOS 12+
+
+## agreement
+- abide by Chinese duanxie convention
+
+## Download
+- Tap here >https://github.com/Armamem0t/MineRain/releases
