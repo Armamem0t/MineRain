@@ -1,18 +1,19 @@
-<div align="center"><img src="https://github.com/Armamem0t/MineRain/blob/main/.github/pngs/icon.png?"width="500" height="281"></div>
+# <div align="center"></div>- MineRain UI Pack-
 
+<img src="https://github.com/Armamem0t/MineRain/blob/main/.github/pngs/icon.png?" width="500" height="281">
 
-# MineRain
-
-- This is a [Minecraft:Bedrock_Edition](https://www.minecraft.net/zh-hans/about-minecraft) pack
+## 
 
 <img src="https://img.shields.io/github/followers/Armamem0t?logo=11&style=flat-square">
 <img alt="GitHub repo file count" src="https://img.shields.io/badge/PTMs-From huggingface-plastic?logo=googletranslate&logoColor=white">
 
-### language
+## language
+
 - [EN](README.md)
 - [简体中文](README_zh.md)
 
-
+##
+- This is a [Minecraft:Bedrock_Edition](https://www.minecraft.net/zh-hans/about-minecraft) pack
 ## Supported operating systems
 - iOS
 - MacOS
