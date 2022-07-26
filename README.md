@@ -5,7 +5,7 @@
 
 # MineRain
 
-- This is a Minecraft:Bedrock_Edition pack
+- This is a [Minecraft:Bedrock_Edition](https://www.minecraft.net/zh-hans/about-minecraft) pack
 
 ## Supported operating systems
 - iOS
@@ -21,14 +21,14 @@
 - iOS 12+
 
 ## BilBil
-- Tap here >https://space.bilibili.com/1013220371
+- [Tap here](https://space.bilibili.com/1013220371)
 
 ## E-mail
 - Armament@email.cn
 - minglipro@163.com
 
 ## agreement
-- abide by Chinese duanxie convention
+- abide by Chinese [UIA](https://jq.qq.com/?_wv=1027&k=G05OsCyj) convention
 
 ## Download
-- Tap here >https://github.com/Armamem0t/MineRain/releases
+- [releases](https://github.com/Armamem0t/MineRain/releases)
