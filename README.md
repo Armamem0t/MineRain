@@ -1,4 +1,6 @@
-<img src="https://github.com/Armamem0t/my-feil/blob/main/pngs/icon.png?">
+<div align="center"><img src="https://github.com/Armamem0t/MineRain/blob/main/.github/pngs/icon.png?"width="500" height="281"></div>
+<div align="center"><img src="https://img.shields.io/github/followers/Armamem0t?logo=11&style=flat-square">    <img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/Armamem0t/MineRain?style=flat-square">   <img src="https://img.shields.io/github/repo-size/Armamem0t/MineRain?style=flat-square"></div>
+
 
 ### language
 - [EN](README.md)
