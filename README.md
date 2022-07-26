@@ -1,6 +1,6 @@
 # <div align="center"></div>- MineRain UI Pack-
 
-<img src="https://github.com/Armamem0t/MineRain/blob/main/.github/pngs/icon.png?" width="500" height="281">
+<img src="https://github.com/Armamem0t/MineRain/blob/main/.github/pngs/icon.png?">
 
 ## 
 
