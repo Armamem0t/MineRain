@@ -1,3 +1,5 @@
+<img src="https://github.com/Armamem0t/MineRain/blob/main/icon.png?">
+
 ### language
 - [EN](README.md)
 - [简体中文](README_zh.md)
