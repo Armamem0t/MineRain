@@ -1,3 +1,8 @@
+### language
+- [EN](README.md)
+- [简体中文](README_zh.md)
+
+
 # MineRain
 
 - This is a Minecraft:Bedrock_Edition pack
