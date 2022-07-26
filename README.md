@@ -1,4 +1,4 @@
-<img src="https://github.com/Armamem0t/MineRain/blob/main/icon.png?">
+<img src="https://github.com/Armamem0t/MineRain/blob/main/.github/pngs/icon.png?">
 
 ### language
 - [EN](README.md)
