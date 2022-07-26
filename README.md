@@ -19,6 +19,8 @@
 
 ##
 - This is a [Minecraft:Bedrock_Edition](https://www.minecraft.net/zh-hans/about-minecraft) pack
+- [Download](https://github.com/Armamem0t/MineRain#download)
+
 ## Supported operating systems
 - iOS
 - MacOS
