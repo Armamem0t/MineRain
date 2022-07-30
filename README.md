@@ -12,6 +12,8 @@
 <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/downloads/Armamem0t/MineRain/Alpha/total?style=flat-square">
 <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/Armamem0t/MineRain?style=flat-square">
 
+<pre><code class="language-bash"style="">copy test<span class="token operator"></code></pre>
+
 ## language
 
 - [EN](README.md)
