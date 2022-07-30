@@ -20,7 +20,7 @@
 - [简体中文](README_zh.md)
 
 ##
-- This is a [Minecraft:Bedrock_Edition](https://www.minecraft.net/zh-hans/about-minecraft) pack
+- This is a [Minecraft:Bedrock_Edition](https://www.minecraft.net/) pack
 - [Download](#download)
 ## Supported operating systems
 - iOS
