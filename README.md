@@ -45,6 +45,7 @@
 
 ## Download
 - [releases](https://github.com/Armamem0t/MineRain/releases)
+- [LanZouM](https://mingliqwq.lanzouw.com/b030rgqha)
 
 ## Termux install code
 
