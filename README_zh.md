@@ -32,4 +32,5 @@
 
 ## Download
 - [releases](https://github.com/Armamem0t/MineRain/releases)
+- [蓝奏云分流](https://mingliqwq.lanzouw.com/b030rgqha)
 
