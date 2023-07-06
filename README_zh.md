@@ -46,7 +46,11 @@
 ## 协议
 - 遵守了[UIA](https://jq.qq.com/?_wv=1027&k=G05OsCyj)创作协议
 
-## Download
+## 下载方式
 - [releases](https://github.com/Armamem0t/MineRain/releases)
 - [蓝奏云分流](https://mingliqwq.lanzouw.com/b030rgqha)
+
+## 安卓和使用
+- 方法1 手机和Windows和iOS
+-- 使用mcpack文件直接安装
 
