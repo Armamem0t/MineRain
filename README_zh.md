@@ -33,6 +33,7 @@
 
 ## 要求
 - Android 10+
+- HarmonyOS 2.0+
 - Windows 10+
 - iOS 12+
 
@@ -50,7 +51,13 @@
 - [releases](https://github.com/Armamem0t/MineRain/releases)
 - [蓝奏云分流](https://mingliqwq.lanzouw.com/b030rgqha)
 
-## 安卓和使用
-- 方法1 手机和Windows和iOS
--- 使用mcpack文件直接安装
-
+## 安装和使用
+- 使用mcpack文件直接安装
+##
+- Windows10+ 打开运行输入
+<pre><code class="language-bash"style="">%localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\resource_packs<span class="token operator"></code></pre>
+把UI包解压放入
+##
+- 安卓&鸿蒙OS 打开文件夹
+<pre><code class="language-bash"style="">/storage/emulated/0/Android/data/com.mojang.minecraftpe/files/games/com.mojang/resource_packs/<span class="token operator"></code></pre>
+把UI包解压放入
