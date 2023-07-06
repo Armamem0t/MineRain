@@ -1,0 +1,61 @@
+{
+  "modal_dialog_with_buttons": {
+    "type": "stack_panel",
+    "controls": [
+      {
+        "top_area": {
+          "type": "image",
+          "texture": "textures/MineRain/black",
+          "size": [
+            "100%",
+            "20px"
+          ],
+          "alpha": 0.5,
+          "controls": [
+            {
+              "title@popup_dialog.modal_title_text": {
+                "offset": [],
+                "size": [],
+                "font_type": "$default_font",
+                "$title_text_anchor": ""
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text_area": {
+          "type": "image",
+          "texture": "textures/MineRain/black",
+          "size": [
+            "100%",
+            "fill"
+          ],
+          "controls": [
+            {
+              "text@popup_dialog.modal_label_panel": {
+                "anchor_from": "",
+                "anchor_to": "",
+                "size": [
+                  "90%",
+                  "100%"
+                ],
+                "offset": []
+              }
+            },
+            {
+              "button_panel@$button_panel": {}
+            }
+          ],
+          "alpha": 0.5
+        }
+      }
+    ]
+  },
+  "modal_dialog_popup/modal_input/black_background": {
+    "ignored": false,
+    "alpha": 0.35,
+    "texture": "textures/MineRain/black"
+  },
+  "namespace": "popup_dialog"
+}

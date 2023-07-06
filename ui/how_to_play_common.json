@@ -1,0 +1,191 @@
+{
+  "topic_category/category_text": {
+    "font_type": "$default_font"
+  },
+  "paragraph": {
+    "font_type": "unicode"
+  },
+  "header_background/header_label": {
+    "font_type": "$default_font"
+  },
+  "section_toggle_button/section_toggle_button": {
+    "$checked_control": "common_toggles.toggle_checked",
+    "$button_content_size": [
+      "100%",
+      "100%"
+    ],
+    "$button_image_size": [
+      "100%",
+      "100%"
+    ],
+    "$button_size_override": [
+      "100%",
+      "100%"
+    ]
+  },
+  "toggle_button_control": {
+    "modifications": [
+      {
+        "operation": "insert_front",
+        "array_name": "controls",
+        "value": [
+          {
+            "toggle_button_on_blue@settings_common.toggle_button_on_blue": {
+              "offset": [
+                0.25,
+                0
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "top_right_button_panel@common.horizontal_stack_panel": {
+    "size": [
+      150,
+      21
+    ],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "controls": [
+      {
+        "action_button@common_buttons.light_text_button": {
+          "size": [
+            60,
+            21
+          ],
+          "$pressed_button_name": "patch_notes_button",
+          "$button_text": "howtoplay.whatsNew"
+        }
+      },
+      {
+        "whats_new_edu@common_buttons.hyperlink_button": {
+          "size": [
+            90,
+            21
+          ],
+          "$button_text": "howtoplay.hyperlink.whatsNew",
+          "property_bag": {
+            "#hyperlink": "https://aka.ms/mcedulogs"
+          }
+        }
+      }
+    ]
+  },
+  "header_background": {
+    "texture": "textures/MineRain/black",
+    "alpha": 0.459
+  },
+  "how_to_play_title@common.screen_header_title_panel": {
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "offset": [
+      "-21.685%",
+      0
+    ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "$screen_header_title": "#section_title",
+    "$screen_header_title_binding_type": "global",
+    "layer": 40
+  },
+  "toggle_button_control/tab_button_text": {
+    "font_type": "$default_font",
+    "anchor_from": "",
+    "anchor_to": "",
+    "size": [],
+    "offset": []
+  },
+  "how_to_play_content": {
+    "modifications": [
+      {
+        "control_name": "header",
+        "operation": "remove"
+      },
+      {
+        "operation": "insert_front",
+        "array_name": "controls",
+        "value": [
+          {
+            "setting_background@minerain_common.screen_background": {
+              "anchor_from": "right_middle",
+              "anchor_to": "right_middle",
+              "offset": [
+                0,
+                0
+              ],
+              "size": [
+                "100%-1px",
+                "100%-1px"
+              ],
+              "visible": "$is_pregame"
+            }
+          },
+          {
+            "screen_background_blur@how_to_play_common.screen_background_blur": {
+              "layer": -5
+            }
+          },
+          {
+            "screen_background_blur_left_top_fill@how_to_play_common.screen_background_blur_left_top_fill": {
+              "layer": -5
+            }
+          },
+          {
+            "store_top_bar@common_store.store_top_bar": {
+              "controls": [
+                {
+                  "back_button@minerain_common.back_top_bar": {
+                    "$is_bg_black": true
+                  }
+                },
+                {
+                  "how_to_play_title@how_to_play_common.how_to_play_title": {}
+                },
+                {
+                  "top_right_button_panel@how_to_play_common.top_right_button_panel": {}
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "dialog_content": {
+    "modifications": [
+      {
+        "control_name": "section_divider",
+        "operation": "remove"
+      }
+    ]
+  },
+  "screen_background_blur@minerain_common.screen_clips_children": {
+    "visible": "$is_pregame",
+    "$clips_offset": [
+      "-70%+2px",
+      "-0%"
+    ],
+    "$image_offset": [
+      "70%-2px",
+      "0%"
+    ]
+  },
+  "screen_background_blur_left_top_fill@minerain_common.screen_clips_children": {
+    "visible": "$is_pregame",
+    "$clips_offset": [
+      "-0%",
+      "-100%+23px"
+    ],
+    "$image_offset": [
+      "0%",
+      "100%-23px"
+    ]
+  },
+  "screen_base": {
+    "$screen_background_control": "minerain_common.image"
+  }
+}

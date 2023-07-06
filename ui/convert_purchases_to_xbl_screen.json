@@ -1,0 +1,130 @@
+{
+  "namespace": "convert_purchases_to_xbl",
+  "convert_purchases_to_xbl_screen": {
+    "$screen_content": "convert_purchases_to_xbl.convert_purchases_to_xbl_screen_control"
+  },
+  "convert_purchases_to_xbl_screen_control": {
+    "type": "panel",
+    "controls": [
+      {
+        "screen_content@convert_purchases_to_xbl.screen_content": {}
+      },
+      {
+        "main_screen_background@convert_purchases_to_xbl.main_screen_background": {}
+      }
+    ]
+  },
+  "main_screen_background": {
+    "type": "panel",
+    "controls": [
+      {
+        "Gaussian_Blur_left_fill@convert_purchases_to_xbl.Gaussian_Blur_left_fill": {}
+      },
+      {
+        "Gaussian_Blur_top_fill@convert_purchases_to_xbl.Gaussian_Blur_top_fill": {}
+      },
+      {
+        "Gaussian_Blur@convert_purchases_to_xbl.Gaussian_Blur": {}
+      },
+      {
+        "screen_background@minerain_common.screen_background": {}
+      }
+    ]
+  },
+  "Gaussian_Blur@minerain_common.screen_clips_children": {
+    "layer": -5,
+    "$clips_offset": [
+      "-50%+120px",
+      "-50%+120px"
+    ],
+    "$image_offset": [
+      "50%-120px",
+      "50%-120px"
+    ]
+  },
+  "Gaussian_Blur_top_fill@minerain_common.screen_clips_children": {
+    "layer": -4,
+    "$not_gaussian_blur": true,
+    "$clips_offset": [
+      "-0%",
+      "-50%-120px"
+    ],
+    "$image_offset": [
+      "0%",
+      "50%+120px"
+    ]
+  },
+  "Gaussian_Blur_left_fill@minerain_common.screen_clips_children": {
+    "layer": -4,
+    "$not_gaussian_blur": true,
+    "$clips_offset": [
+      "-50%-120px",
+      "-0%"
+    ],
+    "$image_offset": [
+      "50%+120px",
+      "0%"
+    ]
+  },
+  "screen_content": {
+    "size": [
+      240,
+      240
+    ],
+    "$button_panel": "",
+    "type": "stack_panel",
+    "controls": [
+      {
+        "top_area": {
+          "type": "image",
+          "texture": "textures/MineRain/black",
+          "size": [
+            "100%",
+            "20px"
+          ],
+          "alpha": 0.7,
+          "controls": [
+            {
+              "title": {
+                "type": "label",
+                "text": "xbl.savePurchase.title",
+                "layer": 3,
+                "font_type": "$default_font"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text_area": {
+          "type": "image",
+          "texture": "textures/MineRain/black",
+          "size": [
+            "100%",
+            "fill"
+          ],
+          "controls": [
+            {
+              "text@convert_purchases_to_xbl.dialog_content": {
+                "size": [
+                  "100%-6px",
+                  "100%-6px"
+                ]
+              }
+            }
+          ],
+          "alpha": 0.5
+        }
+      }
+    ]
+  },
+  "image_panel/image": {
+    "layer": 10,
+    "modifications": [
+      {
+        "control_name": "border",
+        "operation": "remove"
+      }
+    ]
+  }
+}

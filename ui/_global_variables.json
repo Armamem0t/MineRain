@@ -1,0 +1,30 @@
+/*---------------------%%%%%%%---------------------*/             {
+/*--------------------Armament©--------------------*/
+/*Copyright 2019-2022 Armament All Rights Reserved.*/
+/*---------------------%%%%%%%---------------------*/
+/*-------------------------------------------------*/
+
+    "$Vacation_Number": "§b0.2.9",
+    "$Vacation_text": "",
+    "$Vacation_fill": "",
+    "$clientName": "§4M§ci§6n§ee§aR§ba§5i§an",
+    "$PackageVacation": "( $Vacation_name + $Vacation_Number + $Vacation_fill + $Vacation_text )",
+    "$Vacation_name": "§bVacation:",
+    //color 
+    "$black_text_color":"black",
+    "$title_text_color":[1.0,1.0,1.0],
+    //全局字体
+    "$default_font": "minerain_smooth",//You can try the font rune
+    "$font_type": "$default_font",
+    //debug model
+    "$is_debug_mode":false,
+    //下边项修改即为侵权
+    "$Copyright":"Copyright 2019-2022 MingLi|Armament All Rights Reserved.",
+    "$author":"Armament",
+    "$Release_date":"2022.7.15",
+    //light glyph color
+    "$light_glyph_default_color": [ 1, 1, 1 ],
+    "$light_glyph_hover_color": [ 1, 1, 1 ],
+    "$light_glyph_pressed_color": [ 0, 0, 0 ],
+    "$light_glyph_locked_color": [ 1, 1, 1 ]
+}

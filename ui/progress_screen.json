@@ -1,0 +1,19 @@
+{
+	"progress_loading_bars": {
+		"size": [
+			18,
+			9
+		],
+		"uv_size": [
+			6,
+			3
+		],
+		"texture": "textures/MineRain/longing_bar_and_pin",
+		"disable_anim_fast_forward": true
+	},
+	"bar_animation": {
+		"frame_count": 7,
+		"frame_step": 7,
+		"easing": "out_back"
+	}
+}

@@ -1,0 +1,190 @@
+{
+  "namespace": "xbl_optional_signin",
+  "xbl_optional_signin_screen": {
+    "$screen_content": "xbl_optional_signin.screen_content"
+  },
+  "screen_content": {
+    "type": "input_panel",
+    "controls": [
+      {
+        "screen_content_child@xbl_optional_signin.screen_content_child": {}
+      },
+      {
+        "main_screen_background@xbl_optional_signin.main_screen_background": {}
+      }
+    ]
+  },
+  "main_screen_background": {
+    "type": "panel",
+    "controls": [
+      {
+        "Gaussian_Blur_left_fill@xbl_optional_signin.Gaussian_Blur_left_fill": {}
+      },
+      {
+        "Gaussian_Blur_top_fill@xbl_optional_signin.Gaussian_Blur_top_fill": {}
+      },
+      {
+        "Gaussian_Blur@xbl_optional_signin.Gaussian_Blur": {}
+      },
+      {
+        "screen_background@minerain_common.screen_background": {}
+      }
+    ]
+  },
+  "Gaussian_Blur@minerain_common.screen_clips_children": {
+    "layer": -5,
+    "$clips_offset": [
+      "-50%+158.5px",
+      "-50%+79px"
+    ],
+    "$image_offset": [
+      "50%-158.5px",
+      "50%-79px"
+    ]
+  },
+  "Gaussian_Blur_top_fill@minerain_common.screen_clips_children": {
+    "layer": -4,
+    "$not_gaussian_blur": true,
+    "$clips_offset": [
+      "-0%",
+      "-50%-79px"
+    ],
+    "$image_offset": [
+      "0%",
+      "50%+79px"
+    ]
+  },
+  "Gaussian_Blur_left_fill@minerain_common.screen_clips_children": {
+    "layer": -4,
+    "$not_gaussian_blur": true,
+    "$clips_offset": [
+      "-50%-158.5px",
+      "-0%"
+    ],
+    "$image_offset": [
+      "50%+158.5px",
+      "0%"
+    ]
+  },
+  "screen_content_child": {
+    "size": [
+      317,
+      158
+    ],
+    "type": "stack_panel",
+    "controls": [
+      {
+        "top_area": {
+          "type": "image",
+          "texture": "textures/MineRain/black",
+          "size": [
+            "100%",
+            "20px"
+          ],
+          "alpha": 0.7,
+          "controls": [
+            {
+              "title_label@content_log_history.screen_panel_anims": {
+                "type": "label",
+                "text": "#title",
+                "layer": 2,
+                "color": "$title_text_color",
+                "bindings": [
+                  {
+                    "binding_name": "#title"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text_area@": {
+          "type": "image",
+          "texture": "textures/MineRain/black",
+          "size": [
+            "100%",
+            "fill"
+          ],
+          "alpha": 0.5,
+          "controls": [
+            {
+              "panel_anims_i": {
+                "type": "panel",
+                "clips_children": true,
+                "controls": [
+                  {
+                    "anims_pan@xbl_optional_signin.area_panel_anims": {
+                      "type": "panel",
+                      "controls": [
+                        {
+                          "myimage@xbl_optional_signin.title_image_panel": {
+                            "anchor_from": "",
+                            "anchor_to": "",
+                            "size": [
+                              "100%-5px",
+                              "100%-5px"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "button_area": {
+          "type": "image",
+          "texture": "textures/MineRain/black",
+          "size": [
+            "100%",
+            "30px"
+          ],
+          "alpha": 0.5,
+          "controls": [
+            {
+              "horizontal_stack_panel@common.horizontal_stack_panel": {
+                "size": [
+                  "100%-4px",
+                  "100%-4px"
+                ],
+                "controls": [
+                  {
+                    "clipboard_button@common_buttons.light_content_button": {
+                      "size": [
+                        "50%",
+                        "100%"
+                      ],
+                      "$pressed_button_name": "button.xbl_signin",
+                      "$button_content": "xbl_optional_signin.xbl_signin_label"
+                    }
+                  },
+                  {
+                    "menu_exit_button@common_buttons.light_text_button": {
+                      "size": [
+                        "50%",
+                        "100%"
+                      ],
+                      "$pressed_button_name": "button.menu_exit",
+                      "$button_text": "accessibility.button.back"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "area_panel_anims@start.left_middle_panel_anims": {
+    "$start_alpha_from": 0,
+    "$start_alpha_to": 0.5,
+    "$out_alpha_from": 0.5,
+    "$out_alpha_to": 0}
+}

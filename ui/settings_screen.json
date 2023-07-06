@@ -1,0 +1,238 @@
+{
+  "namespace": "settings",
+  "selector_stack_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "player_card_settings@settings.player_card_settings": {
+              "ignored": "$include_world_section"
+            }
+          },
+          {
+            "pidding_1": {
+              "ignored": "(not $include_controls_and_settings_sections)",
+              "type": "panel",
+              "size": [
+                2,
+                2
+              ]
+            }
+          },
+          {
+            "setting_label@settings_common.selector_group_label": {
+              "type": "label",
+              "font_type": "$default_font",
+              "layer": 2,
+              "ignored": "(not $include_controls_and_settings_sections)",
+              "text": "menu.settings"
+            }
+          },
+          {
+            "pack_info_button@minerain_section.pack_info_button": {}
+          }
+        ]
+      }
+    ]
+  },
+  "section_content_panels/general_and_controls_sections": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "pack_info_section@minerain_section.pack_info_section": {}
+          }
+        ]
+      }
+    ]
+  },
+  "selector_stack_panel/controls_and_settings_selector_pane/language_button": {
+    "ignored": "$is_world_edit"
+  },
+  "section_content_panels/general_and_controls_sections/language_section": {
+    "ignored": "$is_world_edit"
+  },
+  "player_card_settings": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "45px"
+    ],
+    "layer": 4,
+    "controls": [
+      {
+        "player_card_settings": {
+          "texture": "textures/ui/Black",
+          "type": "image",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "alpha": 0.5,
+          "layer": 5,
+          "controls": [
+            {
+              "player_card_stack_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%-4px",
+                  "100%-4px"
+                ],
+                "controls": [
+                  {
+                    "gamer_icon_panel": {
+                      "size": [
+                        "100%y",
+                        "100%"
+                      ],
+                      "type": "panel",
+                      "controls": [
+                        {
+                          "gamerpic": {
+                            "type": "image",
+                            "size": [
+                              "100%y",
+                              "100%"
+                            ],
+                            "layer": 6,
+                            "bindings": [
+                              {
+                                "binding_name": "#gamerpic_texture_path",
+                                "binding_name_override": "#texture"
+                              },
+                              {
+                                "binding_name": "#gamerpic_texture_location_type",
+                                "binding_name_override": "#texture_file_system"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "piddling_1": {
+                      "type": "panel",
+                      "size": [
+                        "2px",
+                        "2px"
+                      ]
+                    }
+                  },
+                  {
+                    "name_and_button_stack_panel": {
+                      "type": "stack_panel",
+                      "size": [
+                        "fill",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "name": {
+                            "type": "panel",
+                            "size": [
+                              "100%",
+                              "fill"
+                            ],
+                            "controls": [
+                              {
+                                "name_text_loging": {
+                                  "type": "label",
+                                  "font_type": "$default_font",
+                                  "layer": 6,
+                                  "text": "#gamertag_label",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#gamertag_label"
+                                    },
+                                    {
+                                      "binding_name": "#logged_in",
+                                      "binding_name_override": "#visible"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "name_text": {
+                                  "type": "label",
+                                  "font_type": "$default_font",
+                                  "layer": 6,
+                                  "text": "#player_name",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#player_name"
+                                    },
+                                    {
+                                      "binding_name": "#not_logged_in",
+                                      "binding_name_override": "#visible"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "button": {
+                            "type": "panel",
+                            "size": [
+                              "100%",
+                              "50%"
+                            ],
+                            "$button_image_size": [
+                              "100%",
+                              "100%"
+                            ],
+                            "controls": [
+                              {
+                                "hyperlink_content_button@common_buttons.light_text_button": {
+                                  "$pressed_button_name": "sign_out_button",
+                                  "$button_text": "xbox.signOutLong",
+                                  "size": [
+                                    "100%",
+                                    "100%"
+                                  ],
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#logged_in",
+                                      "binding_name_override": "#visible"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "sinin_button@common_buttons.light_text_button": {
+                                  "size": [
+                                    "100%",
+                                    "100%"
+                                  ],
+                                  "$pressed_button_name": "sign_in_button",
+                                  "$button_text": "xbox.signin",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#not_logged_in",
+                                      "binding_name_override": "#visible"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

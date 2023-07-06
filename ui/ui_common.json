@@ -1,0 +1,374 @@
+{
+  "text_edit_box": {
+    "$disabled_alpha": 0.3
+  },
+  "text_edit_box_label": {
+    "color": [
+      0,
+      1,
+      1
+    ],
+    "font_type": "$default_font"
+  },
+  "text_edit_box_place_holder_label": {
+    "color": [
+      1,
+      1,
+      1
+    ],
+    "alpha": 0.83,
+    "font_type": "$default_font"
+  },
+  "tts_label_focus_wrapper/label": {
+  },
+  "edit_box_indent": {
+    "texture": "textures/MineRain/black",
+    "fill": true,
+    "$alpha|default": 0.6
+  },
+  "edit_box_indent_hover": {
+    "texture": "textures/MineRain/black_hover"
+  },
+  "single_line_label/label_panel": {
+    "font_type": "$default_font"
+  },
+  "screen_header_title_panel/store_header_title": {
+    "anchor_from": "",
+    "size": [],
+    "text_alignment": "",
+    "offset": [
+      0,
+      0
+    ],
+    "anchor_to": "",
+    "font_type": "$default_font"
+  },
+  "scroll_box/box/mouse_box": {
+    "ignored": false
+  },
+  "scroll_box/box": {
+    "modifications": [
+      {
+        "control_name": "touch_box",
+        "operation": "remove"
+      }
+    ]
+  },
+  "scrolling_panel/scroll_mouse": {
+    "ignored": false
+  },
+  "scrolling_panel": {
+    "modifications": [
+      {
+        "control_name": "scroll_touch",
+        "operation": "remove"
+      }
+    ]
+  },
+  "scroll_bar_and_track/stack_panel/panel/centered_panel": {
+    "size": [
+      "5px",
+      "100%-6px"
+    ]
+  },
+  "scroll_bar_and_track/stack_panel": {
+    "visible": "$show_scroll_bar_and_track",
+    "$show_scroll_bar_and_track|default": true
+  },
+  "scrollbar_box_image": {
+    "texture": "textures/MineRain/white",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "color": [
+      0.85,
+      0.85,
+      0.85
+    ],
+    "layer": 4
+  },
+  "scroll_indent_image": {
+    "texture": "textures/MineRain/black",
+    "alpha": 0.6,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 3
+  },
+  "slider_background": {
+    "alpha": 0.5,
+    "texture": "textures/MineRain/black"
+  },
+  "slider_background_hover": {
+    "alpha": 0.7,
+    "texture": "textures/MineRain/blue_hover"
+  },
+  "slider_progress": {
+    "alpha": 0.55,
+    "texture": "textures/MineRain/white"
+  },
+  "slider_progress_hover": {
+    "alpha": 0.55,
+    "texture": "textures/MineRain/white"
+  },
+  "slider_border": {
+    "alpha": 0
+  },
+  "slider_bar_default": {
+    "modifications": [
+      {
+        "control_name": "transparent_grey",
+        "operation": "remove"
+      }
+    ]
+  },
+  "slider_button_state": {
+    "size": [
+      0,
+      0
+    ]
+  },
+  "screen_entrance_animation_wait_push": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "to": 1,
+    "from": 0,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "screen_entrance_animation_wait_pop": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "to": 1,
+    "from": 0,
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+  "screen_exit_animation_wait_push": {
+    "anim_type": "alpha",
+    "duration": 0.6,
+    "from": 1,
+    "to": 0,
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+  "screen_exit_animation_wait_pop": {
+    "anim_type": "alpha",
+    "duration": 0.6,
+    "from": 1,
+    "to": 0,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "base_screen": {
+    "$screen_animations|default": [
+      "@common.screen_entrance_animation_wait_push",
+      "@common.screen_entrance_animation_wait_pop"
+    ],
+    "$black_background|default": false,
+    "modifications": [
+      {
+        "operation": "insert_back",
+        "array_name": "controls",
+        "value": [
+          {
+            "debug_auto_mode@common.debug_auto_model": {}
+          }
+        ]
+      },
+      {
+        "operation": "insert_front",
+        "array_name": "controls",
+        "value": [
+          {
+            "background": {
+              "type": "panel",
+              "size": [
+                "100%",
+                "100%"
+              ],
+              "controls": [
+                {
+                  "image@minerain_common.screen_background": {
+                    "anims": "$background_animations",
+                    "texture": "textures/MineRain/screen_background_Gaussian_Blur",
+                    "animation_reset_name": "screen_animation_reset",
+                    "visible": "$black_background",
+                    "layer": -30
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "safe_zone_stack": {
+    "$header_bar_control": "common.empty_panel",
+    "$header_safezone_control": "common.empty_panel"
+  },
+  "safezone_inner_matrix": {
+    "$header_safezone_control": "common.empty_panel"
+  },
+  "debug_auto_model": {
+    "type": "panel",
+    "$is_debug_mode|default": false,
+    "visible": "$is_debug_mode",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "layer": 300,
+    "controls": [
+      {
+        "debug_stack_text": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "ignored": "($screen_content = debug_screen.content_panel or $screen_content = toast_screen.toast_screen_content)",
+          "$header_safezone_control|default": "Nothing",
+          "$header_bar_control|default": "Nothing",
+          "$screen_background_control|default": "Nothing",
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "screen_content@common.debug_text_template": {
+                "$debug_name": "screen_content",
+                "$debug_state": "$screen_content"
+              }
+            },
+            {
+              "screen_bg_content@common.debug_text_template": {
+                "$debug_name": "screen_bg_content",
+                "$debug_state": "$screen_bg_content"
+              }
+            },
+            {
+              "screen_background_control@common.debug_text_template": {
+                "$debug_name": "screen_background_control",
+                "$debug_state": "$screen_background_control"
+              }
+            },
+            {
+              "minerain_background_visible@common.debug_text_template": {
+                "$debug_name": "minerain_background_visible",
+                "$debug_state": "$black_background"
+              }
+            },
+            {
+              "safezone_screen_matrix_layer@common.debug_text_template": {
+                "$debug_name": "safezone_screen_matrix_layer",
+                "$debug_state": "$safezone_screen_matrix_layer"
+              }
+            },
+            {
+              "header_bar_control@common.debug_text_template": {
+                "$debug_name": "header_bar_control",
+                "$debug_state": "$header_bar_control"
+              }
+            },
+            {
+              "header_safezone_control@common.debug_text_template": {
+                "$debug_name": "header_safezone_control",
+                "$debug_state": "$header_safezone_control"
+              }
+            },
+            {
+              "use_loading_bars@common.debug_text_template": {
+                "$debug_name": "use_loading_bars",
+                "$debug_state": "('' + $use_loading_bars + '')",
+                "$top_vertical_safezone_size_mingli": ""
+              }
+            },
+            {
+              "is_full_screen_layout@common.debug_text_template": {
+                "$debug_name": "is_full_screen_layout",
+                "$debug_state": "('' + $is_full_screen_layout + '')"
+              }
+            },
+            {
+              "vr_mode@common.debug_text_template": {
+                "$debug_name": "vr_mode",
+                "$debug_state": "('' + $is_holographic + '')"
+              }
+            },
+            {
+              "debug_label@common.debug_text_template": {
+                "$debug_name": "debug_model",
+                "$debug_state": "true"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "debug_text_template": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "controls": [
+      {
+        "debug_text_template_image@common.debug_text_template_image": {}
+      }
+    ]
+  },
+  "safezone_buffer": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_name": "$safezone_binding_name",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  "debug_text_template_image": {
+    "type": "image",
+    "size": [
+      "100%c+1px",
+      "100%c+1px"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "texture": "textures/MineRain/black",
+    "alpha": 0.5,
+    "layer": 309,
+    "controls": [
+      {
+        "debug_label": {
+          "type": "label",
+          "size": [
+            "default",
+            "default"
+          ],
+          "color": [
+            0,
+            1,
+            1
+          ],
+          "layer": 310,
+          "text": "($debug_name + ' : ' + $debug_state)",
+          "font_type": "$default_font"
+        }
+      }
+    ]
+  },
+  "screen_panel": {
+    "$clips_children|default": true
+  },
+  "screen_panel/root_screen_panel": {
+    "clips_children": "$clips_children",
+    "enabled": "(($clientName = '§'+'4'+'M'+'§'+'c'+'i'+'§'+'6'+'n'+'§'+'e'+'e'+'§'+'a'+'R'+'§'+'b'+'a'+'§'+'5'+'i'+'§'+'a'+'n')and($Vacation_Number='§'+'b'+'0'+'.'+'2'+'.'+'9')and($Copyright='Copyright 2019-2022 MingLi|Armament All Rights Reserved.'))"
+  }
+}

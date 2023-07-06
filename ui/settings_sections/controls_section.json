@@ -1,0 +1,75 @@
+{
+  "keymapping_item/option_info_label_control": {
+    "texture": "textures/MineRain/black",
+    "size": [
+      "fill",
+      "100%"
+    ],
+    "alpha": 0.5
+  },
+  "keymapping_item/keymapping_button_0": {
+    "size": [
+      "40%",
+      "100%"
+    ]
+  },
+  "keymapping_item/keymapping_button_1": {
+    "size": [
+      "15%",
+      "100%"
+    ]
+  },
+  "gamepad_mapping_item/keymapping_button_0": {
+    "size": [
+      "40%",
+      "100%"
+    ]
+  },
+  "gamepad_mapping_item/keymapping_button_1": {
+    "size": [
+      "15%",
+      "100%"
+    ]
+  },
+  "keymapping_item": {
+    "$button_image_size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "gamepad_mapping_item": {
+    "$button_image_size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "gamepad_mapping_item/option_info_label_control": {
+    "texture": "textures/MineRain/black",
+    "size": [
+      "fill",
+      "100%"
+    ],
+    "alpha": 0.5
+  },
+  "keymapping_item/option_info_label_control/keymapping_label_control": {
+    "font_type": "$default_font"
+  },
+  "gamepad_mapping_item/option_info_label_control/keymapping_label_control": {
+    "font_type": "$default_font"
+  },
+  "binding_button_content/default_label": {
+    "font_type": "$default_font"
+  },
+  "keyboard_and_mouse_section/reset_button": {
+    "$button_image_size": [
+      "100%",
+      "100%-2px"
+    ]
+  },
+  "controller_section/reset_button": {
+    "$button_image_size": [
+      "100%",
+      "100%-2px"
+    ]
+  }
+}

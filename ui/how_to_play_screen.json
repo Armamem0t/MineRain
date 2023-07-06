@@ -1,0 +1,18 @@
+{
+	"selector_stack_panel/how_to_play_selector_pane": {
+		"modifications": [
+			{
+				"control_name": "padding_0",
+				"operation": "remove"
+			},
+			{
+				"control_name": "action_button",
+				"operation": "remove"
+			},
+			{
+				"control_name": "whats_new_edu",
+				"operation": "remove"
+			}
+		]
+	}
+}

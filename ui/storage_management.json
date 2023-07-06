@@ -1,0 +1,515 @@
+{
+  "main_content_panel/panel/image_panel/image_border": {
+    "alpha": 1,
+    "variables": [
+      {
+        "requires": "($button_state = default)",
+        "$image_border_texture": "textures/MineRain/black_border"
+      },
+      {
+        "requires": "($button_state = hover)",
+        "$image_border_texture": "textures/MineRain/white_border"
+      }
+    ]
+  },
+  "not_error_icon": {
+    "type": "image",
+    "size": [
+      "100%-5px",
+      "100%-5px"
+    ],
+    "texture": "textures/ui/confirm"
+  },
+  "sub_item_blank_button@common_buttons.new_ui_button_panel": {
+    "$new_ui_button_texture": "textures/ui/White",
+    "$content_alpha": 0.5
+  },
+  "resource_toggle/item_button_panel/y_sizing_panel/border": {
+    "texture": "textures/ui/Black",
+    "size": "$size",
+    "$size": [
+      "200%y-2px",
+      "100%"
+    ],
+    "offset": [
+      0,
+      -1
+    ],
+    "alpha": 0.5,
+    "variables": [
+      {
+        "requires": "(not ($panel_prefix = 'resource') and not ($panel_prefix = 'behavior') and not ($panel_prefix = 'cache'))",
+        "$size": [
+          "100%y+2px",
+          "100%"
+        ]
+      }
+    ]
+  },
+  "common_main_button/background": {
+    "texture": "textures/ui/Black",
+    "alpha": 0.5
+  },
+  "resource_toggle/item_button_panel/y_sizing_panel/border/button_panel": {
+    "clips_children": true,
+    "controls": [
+      {
+        "delete_button@storage_management.sub_item_tray_button": {
+          "$glyph_size": [
+            15,
+            17
+          ],
+          "$pressed_button_name": "button.deleteResources",
+          "$button_texture": "textures/ui/trash",
+          "bindings": [
+            {
+              "binding_type": "collection_details"
+            }
+          ]
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": [
+            2,
+            "100%"
+          ]
+        }
+      },
+      {
+        "dependency_button_warn@storage_management.sub_item_tray_button": {
+          "visible": true,
+          "ignored": false,
+          "layer": 20,
+          "$glyph_size": [
+            13,
+            20
+          ],
+          "$pressed_button_name": "button.warningDependency",
+          "$button_texture": "#pack_info_texture",
+          "$button_texture_binding_type": "collection",
+          "$button_texture_collection_name": "($panel_prefix + _panel)",
+          "$warning_binding|default": "collection",
+          "bindings": [
+            {
+              "binding_type": "$warning_binding",
+              "binding_collection_name": "($panel_prefix + _panel)",
+              "binding_name": "('#sub_' + $panel_prefix + _warning_button)",
+              "binding_name_override": "#visible"
+            },
+            {
+              "binding_type": "collection_details"
+            }
+          ]
+        }
+      },
+      {
+        "dependency_button_fill": {
+          "type": "panel",
+          "size": [
+            50,
+            50
+          ],
+          "$button_texture_binding_type": "collection",
+          "$button_texture_collection_name": "($panel_prefix + _panel)",
+          "$warning_binding|default": "collection",
+          "bindings": [
+            {
+              "binding_type": "$warning_binding",
+              "binding_collection_name": "($panel_prefix + _panel)",
+              "binding_name": "('#sub_' + $panel_prefix + _warning_button)",
+              "binding_name_override": "#visible"
+            },
+            {
+              "binding_type": "collection_details"
+            }
+          ]
+        }
+      },
+      {
+        "dependency_button@storage_management.sub_item_tray_button": {
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$glyph_size": [
+            13,
+            20
+          ],
+          "$pressed_button_name": "button.warningDependency",
+          "$button_texture_binding_type": "collection",
+          "$button_texture_collection_name": "($panel_prefix + _panel)",
+          "$warning_binding|default": "collection",
+          "ignored": "(not ($panel_prefix = 'resource') and not ($panel_prefix = 'behavior') and not ($panel_prefix = 'cache'))",
+          "$button_texture": "",
+          "$button_content": "storage_management.not_error_icon",
+          "bindings": [
+            {
+              "binding_type": "collection_details"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "pack_description_sub_item@storage_management.texture_icon_text": {
+    "$check_visible": true,
+    "$text_controls": [
+      {
+        "panel": {
+          "type": "stack_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "main_label@storage_management.common_label": {
+                "size": [
+                  "65%",
+                  "default"
+                ],
+                "text": "$name_text",
+                "bindings": "$name_bindings"
+              }
+            },
+            {
+              "glyphs_and_version": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100% - 10px",
+                  10
+                ],
+                "layer": 4,
+                "controls": [
+                  {
+                    "glyph_warning@storage_management.base_glyph": {
+                      "$binding_name": "warning",
+                      "$glyph_texture": "textures/ui/WarningGlyph"
+                    }
+                  },
+                  {
+                    "glyph_error@storage_management.base_glyph": {
+                      "$binding_name": "error",
+                      "$glyph_texture": "textures/ui/ErrorGlyph"
+                    }
+                  },
+                  {
+                    "glyph_update@storage_management.base_glyph": {
+                      "$binding_name": "update",
+                      "$glyph_texture": "textures/ui/UpdateGlyph"
+                    }
+                  },
+                  {
+                    "version_label@storage_management.common_label": {
+                      "size": [
+                        "fill",
+                        "100%"
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$version_name": "('#sub_' + $panel_prefix + _version)",
+                      "$version_binding_visible": "('#sub_' + $panel_prefix + _valid)",
+                      "$version_binding_collection": "($panel_prefix + _panel)",
+                      "text": "$version_name",
+                      "bindings": [
+                        {
+                          "binding_type": "collection",
+                          "binding_collection_name": "$version_binding_collection",
+                          "binding_name": "$version_name"
+                        },
+                        {
+                          "binding_type": "collection",
+                          "binding_collection_name": "$version_binding_collection",
+                          "binding_name": "$version_binding_visible",
+                          "binding_name_override": "#visible"
+                        },
+                        {
+                          "binding_type": "collection_details"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "desc_label@storage_management.common_label": {
+                "size": [
+                  "100% - 4px",
+                  20
+                ],
+                "max_size": [
+                  "100% - 4px",
+                  17
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$description_name": "('#sub_' + $panel_prefix + _description)",
+                "$description_binding_collection": "($panel_prefix + _panel)",
+                "text": "$description_name",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$description_binding_collection",
+                    "binding_name": "$description_name"
+                  },
+                  {
+                    "binding_type": "collection_details"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "size_label@storage_management.common_label": {
+          "size": "$right_label_size",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [
+            -5,
+            0
+          ],
+          "text": "$size_text",
+          "bindings": "$size_bindings"
+        }
+      }
+    ]
+  },
+  "common_main_button/border": {
+    "visible": false
+  },
+  "main_content_panel/panel/image_panel/image_border/image": {
+    "fill": true
+  },
+  "dropdown_button_content/text_panel/main_label": {
+    "color": "$light_toggle_default_text_color"
+  },
+  "main_item_text@storage_management.main_content_panel": {
+    "$text_controls": [
+      {
+        "glyph_and_name": {
+          "type": "stack_panel",
+          "size": [
+            "65%",
+            "default"
+          ],
+          "orientation": "horizontal",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4,
+            5
+          ],
+          "$glyph_binding": [
+            {
+              "binding_type": "global",
+              "binding_name": "('#' + $panel_prefix + _ + $binding_name)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "main_label@storage_management.common_label": {
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "(not #storage_dropdown)",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "storage_panel"
+                  }
+                ],
+                "text": "$name_text"
+              }
+            },
+            {
+              "main_label_pressed@storage_management.common_label": {
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "text": "$name_text",
+                "color": "black",
+                "bindings": [
+                  {
+                    "binding_name": "#storage_dropdown",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "storage_panel"
+                  }
+                ]
+              }
+            },
+            {
+              "padding": {
+                "type": "panel",
+                "size": [
+                  2,
+                  "100%"
+                ]
+              }
+            },
+            {
+              "glyph_warning@storage_management.base_glyph": {
+                "size": [
+                  9,
+                  9
+                ],
+                "$binding_name": "warning",
+                "$glyph_texture": "textures/ui/WarningGlyph",
+                "bindings": "$glyph_binding"
+              }
+            },
+            {
+              "glyph_error@storage_management.base_glyph": {
+                "size": [
+                  9,
+                  9
+                ],
+                "$binding_name": "error",
+                "$glyph_texture": "textures/ui/ErrorGlyph",
+                "bindings": "$glyph_binding"
+              }
+            },
+            {
+              "glyph_update@storage_management.base_glyph": {
+                "size": [
+                  9,
+                  9
+                ],
+                "$binding_name": "update",
+                "$glyph_texture": "textures/ui/UpdateGlyph",
+                "bindings": "$glyph_binding"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "size_labels": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "(not #storage_dropdown)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "storage_panel"
+            }
+          ],
+          "controls": [
+            {
+              "size_label@storage_management.common_label": {
+                "size": "$right_label_size",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [
+                  4,
+                  -5
+                ],
+                "bindings": "$size_bindings",
+                "text": "$size_text"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "size_labels_pressed": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "#storage_dropdown",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "storage_panel"
+            }
+          ],
+          "controls": [
+            {
+              "size_label@storage_management.common_label": {
+                "size": "$right_label_size",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "color": "black",
+                "offset": [
+                  4,
+                  -5
+                ],
+                "bindings": "$size_bindings",
+                "text": "$size_text"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "arrow_down": {
+          "type": "image",
+          "layer": 2,
+          "offset": [
+            -10,
+            0
+          ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "size": [
+            8,
+            8
+          ],
+          "texture": "textures/ui/arrowDown",
+          "visible": true,
+          "bindings": [
+            {
+              "binding_name": "#storage_dropdown",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "storage_panel"
+            }
+          ]
+        }
+      },
+      {
+        "arrow_right": {
+          "type": "image",
+          "layer": 2,
+          "offset": [
+            -10,
+            0
+          ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "size": [
+            8,
+            8
+          ],
+          "texture": "textures/ui/arrowRight",
+          "bindings": [
+            {
+              "binding_name": "(not #storage_dropdown)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "storage_panel"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "common_label": {
+    "font_type": "$default_font",
+    "color": "$common_label_color",
+    "$common_label_color|default": [
+      1,
+      1,
+      1
+    ]
+  },
+  "generic_button/text": {
+    "font_type": "$default_font"
+  }
+}

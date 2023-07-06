@@ -1,0 +1,104 @@
+{
+  "namespace": "content_log",
+  "content_log_panel/stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "factory": {
+      "name": "content_log_item_factory",
+      "max_children_size": 3,
+      "control_ids": {
+        "content_log_item": "content_log_item@content_log.content_log_grid_item"
+      }
+    }
+  },
+  "content_log_grid_item": {
+    "type": "panel",
+    "layer": 1,
+    "size": [
+      "100%-2px",
+      "100%c"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "content_log_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.5,
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "anims": [
+            "@content_log.anim_content_log_offset",
+            "@content_log.anim_content_log_alpha"
+          ],
+          "controls": [
+            {
+              "content_log_text@content_log_label": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  2,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "anim_content_log_offset": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 1,
+    "to": [
+      0,
+      0
+    ],
+    "from": [
+      -40,
+      0
+    ],
+    "next": "@content_log.anim_content_log_offset_white"
+  },
+  "anim_content_log_offset_white": {
+    "anim_type": "wait",
+    "duration": "($content_log_item_lifetime - 1.5)",
+    "next": "@content_log.anim_content_log_txt_offset_out"
+  },
+  "anim_content_log_txt_offset_out": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 1,
+    "to": [
+      "100%",
+      0
+    ],
+    "from": [
+      0,
+      0
+    ]
+  },
+  "anim_content_log_alpha": {
+    "anim_type": "alpha",
+    "duration": 0.7,
+    "from": 0.0,
+    "to": 0.5,
+    "next": "@content_log.anim_content_log_alpha_white"
+  },
+  "anim_content_log_alpha_white": {
+    "anim_type": "wait",
+    "duration": "($content_log_item_lifetime + 0.3)",
+    "next": "@content_log.anim_content_log_alpha_out"
+  },
+  "anim_content_log_alpha_out": {
+    "anim_type": "alpha",
+    "duration": 0.7,
+    "from": 0.5,
+    "to": 0.0
+  }
+}

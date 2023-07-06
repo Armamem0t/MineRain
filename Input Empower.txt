@@ -1,0 +1,2 @@
+3516952132(懒洋洋) 玩家卡片 @common_deskfoand.player_card---player_card_settings
+310414661|(BrokeSky) 暂停界面icon ui/image_png/pause_screen

@@ -1,0 +1,110 @@
+/*---------------------%%%%%%%---------------------*/             {
+/*--------------------Armament©--------------------*/
+/*Copyright 2019-2022 Armament All Rights Reserved.*/
+/*---------------------%%%%%%%---------------------*/
+/*-------------------------------------------------*/
+    "namespace": "general_section",
+    "background/fill": {
+        "alpha": 0.3//alpha old is 0.8
+    },
+    "background/border": {
+        "visible": false//not border
+    },
+    //audio_sliders
+    "sound_section":{
+      "modifications": [
+        {
+          "control_name": "dividerAudioSettings",
+          "operation": "remove"
+        }
+      ],
+	    "$spatialPatternsPadding": ["100%", 7],
+	    "$audioSlidersSize": [ "100%", 30]
+	  },
+    "how_to_play_section":{
+      "modifications": [
+        {
+          "control_name": "spacer_1",
+          "operation": "remove"
+        },
+        {
+          "control_name": "gamepad_helper_label",
+          "operation": "remove"
+        }
+      ],
+	    "$spatialPatternsPadding": ["100%", 7],
+	    "$audioSlidersSize": [ "100%", 30]
+	  },
+    //font type
+    "content_log_panel/content_log_section_label":{"font_type": "$default_font"},
+    "content_log_panel/content_log_location_label":{"font_type": "$default_font"},
+    "content_log_panel/content_log_location_label_header":{"font_type": "$default_font"},
+    "profile_section/licenses_label_header":{"font_type": "$default_font"},
+    "profile_section/third_party_copyright_info_label_panel/copyright_label":{"font_type": "$default_font"},
+    "profile_section/build_info_label_panel/build_id_label":{"font_type": "$default_font"},
+    "profile_section/build_info_label_panel/world_converter_label":{"font_type": "$default_font"},
+    "profile_section/build_info_label_panel/protocol_version_label":{"font_type": "$default_font"},
+    "profile_section/build_info_label_panel/build_date_label":{"font_type": "$default_font"},
+    "profile_section/build_info_label_panel/commerce_id_label":{"font_type": "$default_font"},
+    "profile_section/build_info_label_panel/MinecraftAccount_id_label":{"font_type": "$default_font"},
+    "profile_section/build_info_label_panel/device_id_label":{"font_type": "$default_font"},
+    "notification_duration_info_label":{"font_type": "$default_font"},
+    "notification_duration_label":{"font_type": "$default_font"},
+    "darkness_slider_label":{"font_type": "$default_font"},
+    //
+    "how_to_play_button":{
+        "$glyph_texture": "textures/ui/how_to_play_button_default",
+        "$glyph_color_texture": "textures/ui/how_to_play_button_default_light"
+    },
+    //gamertag font type
+    "gamertag_controls/gamertag_label/panel_descriptor/label_descriptor":{"font_type":"$default_font"},
+    "gamertag_controls/gamertag_label/panel_gamertag/gamertag_label":{"font_type":"$default_font"},
+    //Thanks for Mintraspberry
+    //option dropdown buttons
+    "video_section/ui_profile_dropdown": {
+        "$control_name": "settings_common.option_dropdown_control_button_mode",
+        "$button_mode_type": "2",
+        "$1_binding_name": "#ui_profile_radio_classic",
+        "$2_binding_name": "#ui_profile_radio_pocket",
+        "$1_label_text": "options.uiprofile.classic",
+        "$2_label_text": "options.uiprofile.pocket"
+    },
+    "video_section/perspective_dropdown": {
+        "$control_name": "settings_common.option_dropdown_control_button_mode",
+        "$button_mode_type": "3",
+        "$1_binding_name": "#thirdperson_radio_first",
+        "$2_binding_name": "#thirdperson_radio_third_back",
+        "$3_binding_name": "#thirdperson_radio_third_front",
+        "$1_label_text": "options.thirdperson.firstperson",
+        "$2_label_text": "options.thirdperson.thirdpersonback",
+        "$3_label_text": "options.thirdperson.thirdpersonfront"
+    },
+    "profile_section/file_storage_dropdown": {
+        "$control_name": "settings_common.option_dropdown_control_button_mode",
+        "$button_mode_type": "2",
+        "$1_binding_name": "#storage_location_radio_external",
+        "$2_binding_name": "#storage_location_radio_package",
+        "$1_label_text": "options.filelocation.external",
+        "$2_label_text": "options.filelocation.appdata"
+    },
+    "profile_section/auto_update_mode_dropdown": {
+        "$control_name": "settings_common.option_dropdown_control_button_mode",
+        "$button_mode_type": "3",
+        "$1_binding_name": "#auto_update_mode_off",
+        "$2_binding_name": "#auto_update_mode_on_wifi_only",
+        "$3_binding_name": "#auto_update_mode_on_with_cellular",
+        "$1_label_text": "options.autoUpdateMode.off",
+        "$2_label_text": "options.autoUpdateMode.on.withWifiOnly",
+        "$3_label_text": "options.autoUpdateMode.on.withCellular"
+    },
+    "accessibility_section/notification_duration_options_panel/notification_duration_dropdown": {
+        "$control_name": "settings_common.option_dropdown_control_button_mode",
+        "$button_mode_type": "3",
+        "$1_binding_name": "#notification_duration_radio_ThreeSec",
+        "$2_binding_name": "#notification_duration_radio_TenSec",
+        "$3_binding_name": "#notification_duration_radio_ThirtySec",
+        "$1_label_text": "options.notificationDuration.ThreeSec",
+        "$2_label_text": "options.notificationDuration.TenSec",
+        "$3_label_text": "options.notificationDuration.ThirtySec"
+    }
+}

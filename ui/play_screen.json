@@ -1,0 +1,270 @@
+{
+	"namespace": "play",
+	"play_screen": {
+		"$screen_content": "play_minerain.play_screen_content",
+		"$black_background": true
+	},
+	"world_list_label_panel/list_label": {
+		"font_type": "$default_font"
+	},
+	"news_section_panel/news_label": {
+		"font_type": "$default_font"
+	},
+	"description_section_panel/description_label": {
+		"font_type": "$default_font"
+	},
+	"screenshots_section_panel/screenshots_label": {
+		"font_type": "$default_font"
+	},
+	"games_section_panel/description_label": {
+		"font_type": "$default_font"
+	},
+	"crossplatform_disabled_panel/disable_text": {
+		"font_type": "$default_font"
+	},
+	"game_tip_item_panel/label_panel/realms_warning_text": {
+		"font_type": "$default_font"
+	},
+	"label_content_template/label_panel/label_panel_layout/label": {
+		"font_type": "$default_font"
+	},
+	"information_panel/background/label_panel_layout/label": {
+		"font_type": "$default_font"
+	},
+	"common_button_text": {
+		"font_type": "$default_font"
+	},
+	"local_world_game_mode": {
+		"color": "$text_color",
+		"font_type": "$default_font"
+	},
+	"legacy_world_game_mode": {
+		"color": "$text_color",
+		"font_type": "$default_font"
+	},
+	"local_world_date": {
+		"color": "$text_color",
+		"font_type": "$default_font"
+	},
+	"legacy_world_date": {
+		"color": "$text_color",
+		"font_type": "$default_font"
+	},
+	"local_world_filesize": {
+		"color": "$text_color",
+		"font_type": "$default_font"
+	},
+	"network_world_details": {
+		"color": "$text_color",
+		"font_type": "$default_font"
+	},
+	"legacy_world_filesize": {
+		"color": "$text_color",
+		"font_type": "$default_font"
+	},
+	"world_list_text": {
+		"font_type": "$default_font"
+	},
+	"realms_sign_in_prompt_label": {
+		"font_type": "$default_font"
+	},
+	"world_list_label_with_color_panel/list_label": {
+		"font_type": "$default_font"
+	},
+	"light_loading_label": {
+		"font_type": "$default_font"
+	},
+	"loading_label": {
+		"font_type": "$default_font"
+	},
+	"dark_label_background": {
+		"type": "image",
+		"alpha": 0.412,
+		"texture": "textures/ui/Black"
+	},
+	"label_background": {
+		"texture": "textures/MineRain/black",
+		"alpha": 0.5
+	},
+	"server_button_content_panel/bottom_panel/third_party_server_message": {
+		"color": "$text_color",
+		"font_type": "oldsmooth"
+	},
+	"featured_server_world_item/server_button": {
+		"$button_content": "play.server_button_content_ml_panel"
+	},
+	"server_toggle_base": {
+		"$toggle_group_default_selected": 3
+	},
+	"more_servers_world_item/additional_server_toggle_base": {
+		"$button_content": "play.network_world_item_button_content_mingli"
+	},
+	"server_button_content_ml_panel": {
+		"type": "panel",
+		"controls": [
+			{
+				"server_button_content_panel@play.server_button_content_panel": {}
+			},
+			{
+				"toggle_button_on_blue@minerain_common.image": {
+					"texture": "textures/MineRain/blue_hover",
+					"size": [
+						"2px",
+						"100%+4px"
+					],
+					"offset": [
+						2,
+						0
+					],
+					"anchor_from": "right_middle",
+					"anchor_to": "right_middle",
+					"visible": "($new_ui_button_texture = $pressed_no_hover_texture or $new_ui_button_texture = $hover_texture)"
+				}
+			}
+		]
+	},
+	"network_world_item_button_content_mingli": {
+		"type": "panel",
+		"controls": [
+			{
+				"server_button_content_panel@play.additional_server_toggle_content": {}
+			},
+			{
+				"toggle_button_on_blue@minerain_common.image": {
+					"texture": "textures/MineRain/blue_hover",
+					"size": [
+						"2px",
+						"100%+4px"
+					],
+					"offset": [
+						2,
+						0
+					],
+					"anchor_from": "right_middle",
+					"anchor_to": "right_middle",
+					"visible": "($new_ui_button_texture = $pressed_no_hover_texture or $new_ui_button_texture = $hover_texture)"
+				}
+			}
+		]
+	},
+	"worlds_stack_panel/realms_panel/placeholder_personal_realms_panel": {
+		"size": [
+			"100%",
+			"39px"
+		],
+		"min_size": [
+			0,
+			0
+		],
+		"modifications": [
+			{
+				"operation": "remove",
+				"control_name": "progress_loading_bars"
+			},
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": [
+					{
+						"progress_loading_bars@progress.progress_loading_bars": {
+							"offset": [
+								0,
+								8
+							]
+						}
+					}
+				]
+			}
+		]
+	},
+	"world_content_panel": {
+		"variables": [
+			{
+				"requires": "$default_state",
+				"$border_texture": "textures/ui/Black"
+			},
+			{
+				"requires": "$hover_state",
+				"$border_texture": "textures/ui/world_screenshot_focus_border"
+			},
+			{
+				"requires": "$pressed_state",
+				"$border_texture": "textures/ui/world_screenshot_focus_border"
+			},
+			{
+				"requires": "$locked_state",
+				"$border_texture": "textures/ui/Black"
+			}
+		]
+	},
+	"server_button_content_panel": {
+		"variables": [
+			{
+				"requires": "$toggle_unchecked",
+				"$border_texture": "textures/ui/Black"
+			},
+			{
+				"requires": "$toggle_unchecked_hover",
+				"$border_texture": "textures/ui/world_screenshot_focus_border"
+			},
+			{
+				"requires": "$toggle_checked_hover",
+				"$border_texture": "textures/ui/world_screenshot_focus_border"
+			},
+			{
+				"requires": "$toggle_checked",
+				"$border_texture": "textures/ui/Black"
+			},
+			{
+				"requires": "$toggle_locked",
+				"$border_texture": "textures/ui/Black"
+			}
+		]
+	},
+	"world_screenshot_base": {
+		"type": "image",
+		"size": [
+			"100%cm + 2px",
+			"100%"
+		],
+		"texture": "$border_texture",
+		"anchor_from": "left_middle",
+		"anchor_to": "left_middle",
+		"layer": 1
+	},
+	"create_on_realms_button_panel": {
+		"type": "panel",
+		"size": [
+			"100%",
+			"100%cm"
+		],
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"controls": [
+			{
+				"create_on_realms_button@settings_common.action_button": {
+					"size": [
+						"100%",
+						29
+					],
+					"$button_text": "createWorldScreen.createOnRealms",
+					"$pressed_button_name": "button.create_on_realms_button",
+					"variables": [
+						{
+							"requires": "$realms_plus_on",
+							"$default_pressed_alpha": 0.5,
+							"$default_hover_alpha": 0.5,
+							"$default_button_alpha": 0.5
+						}
+					],
+					"bindings": [
+						{
+							"binding_name": "#create_on_realms_button_visible",
+							"binding_name_override": "#visible"
+						}
+					]
+				}
+			}
+		]
+	}
+}

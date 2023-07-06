@@ -1,0 +1,942 @@
+{
+  "option_text_edit_control_with_text_button/button": {
+    "$button_image_size": [
+      "100% - 2px",
+      "100%"
+    ]
+  },
+  "section_toggle_base": {
+    "$button_content_size": [
+      "100%",
+      "100%"
+    ],
+    "$button_image_size": [
+      "100%",
+      "100%"
+    ],
+    "$button_size_override": [
+      "100%",
+      "100%"
+    ],
+    "size": [
+      "100%",
+      30
+    ]
+  },
+  "white_label": {
+    "font_type": "$default_font"
+  },
+  "option_toggle_state_template": {
+    "size": [
+      30,
+      16
+    ],
+    "layer": 5,
+    "$on_off_label_alpha|default": 1,
+    "controls": [
+      {
+        "option_toggle_on_off_label": {
+          "type": "label",
+          "alpha": "$on_off_label_alpha",
+          "text": "$on_off_label_text",
+          "layer": 7,
+          "font_type": "$default_font",
+          "color": "$on_off_label_color"
+        }
+      },
+      {
+        "option_toggle_on_blue": {
+          "type": "image",
+          "size": [
+            2,
+            "100%"
+          ],
+          "layer": 7,
+          "visible": "$blue_visible",
+          "$blue_visible|default": false,
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "alpha": 1,
+          "texture": "textures/MineRain/blue_hover"
+        }
+      }
+    ]
+  },
+  "toggle_button_control/glyph": {
+    "alpha": 1
+  },
+  "toggle_button_control/glyph_color": {
+    "alpha": 1
+  },
+  "option_slider_control/slider": {
+    "size": [
+      "100%",
+      16
+    ]
+  },
+  "radio_visuals/accessibility_selection_highlight": {
+    "tiled": false,
+    "alpha": 0.6,
+    "$selection_highlight_size|default": [
+      "100% + 4px",
+      "100%+1px"
+    ]
+  },
+  "radio_visuals_unchecked": {
+    "$radio_texture": ""
+  },
+  "radio_visuals_checked": {
+    "$radio_texture": "textures/MineRain/allright"
+  },
+  "radio_visuals_unchecked_hover": {
+    "$radio_texture": ""
+  },
+  "radio_visuals_checked_hover": {
+    "$radio_texture": "textures/MineRain/allright"
+  },
+  "radio_visuals/radio_label": {
+    "font_type": "$default_font",
+    "anchor_from": "",
+    "anchor_to": "",
+    "offset": [
+      -4,
+      0
+    ],
+    "size": []
+  },
+  "radio_visuals": {
+    "variables": [
+      {
+        "requires": "$selected",
+        "$highlight_image": "textures/MineRain/black"
+      },
+      {
+        "requires": "$hovered",
+        "$highlight_image": "textures/MineRain/blue_hover"
+      }
+    ]
+  },
+  "option_toggle_on@settings_common.option_toggle_state_template": {
+    "texture": "textures/MineRain/white",
+    "alpha": 0.55,
+    "$on_off_label_text": "option.toggle.on",
+    "$blue_visible": true,
+    "$on_off_label_color": "black"
+  },
+  "option_toggle_off@settings_common.option_toggle_state_template": {
+    "texture": "textures/MineRain/black",
+    "alpha": 0.55,
+    "$on_off_label_color": "white",
+    "$on_off_label_text": "option.toggle.off"
+  },
+  "option_toggle_on_hover@settings_common.option_toggle_state_template": {
+    "texture": "textures/MineRain/white_hover",
+    "$on_off_label_text": "option.toggle.on",
+    "$on_off_label_color": "black",
+    "$blue_visible": true,
+    "alpha": 0.55
+  },
+  "option_toggle_off_hover@settings_common.option_toggle_state_template": {
+    "texture": "textures/MineRain/black_hover",
+    "$on_off_label_color": "white",
+    "$on_off_label_text": "option.toggle.off",
+    "alpha": 0.55
+  },
+  "option_toggle_on_locked@settings_common.option_toggle_on": {
+    "alpha": 0.3,
+    "$on_off_label_alpha": 0.6
+  },
+  "option_toggle_off_locked@settings_common.option_toggle_off": {
+    "alpha": 0.3,
+    "$on_off_label_alpha": 0.6
+  },
+  "settings_content/background": {
+    "visible": false
+  },
+  "option_group_label/text": {
+    "font_type": "$default_font"
+  },
+  "selector_group_label": {
+    "font_type": "$default_font"
+  },
+  "dynamic_dialog_screen@common.base_screen": {
+    "variables": [],
+    "$minerain_background_visible": true,
+    "$screen_content": "settings_common.settings_content",
+    "$screen_background_control": "minerain_common.image"
+  },
+  "dynamic_dialog_screen": {
+    "$black_background": "$is_pregame"
+  },
+  "selector_area/scrolling_panel": {
+    "$show_scroll_bar_and_track": true
+  },
+  "settings_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "setting_background@minerain_common.screen_background": {
+              "anchor_from": "right_middle",
+              "anchor_to": "right_middle",
+              "offset": [
+                0,
+                0
+              ],
+              "size": [
+                "100%-1px",
+                "100%-1px"
+              ],
+              "visible": "$is_pregame"
+            }
+          },
+          {
+            "setting_background_blur@settings_common.setting_background_blur": {}
+          },
+          {
+            "setting_background_blur_left_top_fill@settings_common.setting_background_blur_left_top_fill": {}
+          },
+          {
+            "store_top_bar@common_store.store_top_bar": {
+              "controls": [
+                {
+                  "back_button@minerain_common.back_top_bar": {
+                    "$is_bg_black": true,
+                    "offset": [
+                      0,
+                      -1
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "settings_content/stack_panel/content_panel/common_panel": {
+    "visible": false
+  },
+  "dialog_titles/dialog_title_label": {
+    "visible": false
+  },
+  "dialog_titles": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "dialog_title_panel": {
+              "type": "panel",
+              "size": [
+                "40% - 3px",
+                "100%-1px"
+              ],
+              "controls": [
+                {
+                  "dialog_title_panel@settings_common.dialog_title_label": {
+                    "offset": [
+                      50,
+                      0
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "setting_background_blur@minerain_common.screen_clips_children": {
+    "visible": "$is_pregame",
+    "$clips_offset": [
+      "-60%+1px",
+      "-0%"
+    ],
+    "$image_offset": [
+      "60%-1px",
+      "0%"
+    ]
+  },
+  "setting_background_blur_left_top_fill@minerain_common.screen_clips_children": {
+    "visible": "$is_pregame",
+    "$clips_offset": [
+      "-0%",
+      "-100%+23px"
+    ],
+    "$image_offset": [
+      "0%",
+      "100%-23px"
+    ]
+  },
+  "section_divider": {
+    "visible": false
+  },
+  "toggle_button_control/tab_button_text": {
+    "visible": false
+  },
+  "toggle_button_control": {
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "toggle_button_label": {
+              "type": "label",
+              "text": "$button_text",
+              "layer": 3,
+              "font_type": "$default_font",
+              "color": "$text_color"
+            }
+          },
+          {
+            "toggle_button_on_blue@settings_common.toggle_button_on_blue": {}
+          }
+        ]
+      }
+    ]
+  },
+  "toggle_button_on_blue@minerain_common.image": {
+    "$texture|default": "textures/MineRain/blue_hover",
+    "texture": "$texture",
+    "size": [
+      "2px",
+      "100%"
+    ],
+    "offset": [
+      0.1,
+      0
+    ],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "variables": [
+      {
+        "requires": "($toggle_unchecked or $toggle_unchecked_hover)",
+        "$texture": "textures/MineRain/white"
+      }
+    ]
+  },
+  "selector_area_offset_entrance_push": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 1,
+    "from": [
+      2,
+      "41px"
+    ],
+    "to": [
+      2,
+      "21px"
+    ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "selector_area_offset_entrance_pop": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 1,
+    "from": [
+      2,
+      "41px"
+    ],
+    "to": [
+      2,
+      "21px"
+    ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+  "selector_area_offset_exit_push": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 1,
+    "from": [
+      2,
+      "21px"
+    ],
+    "to": [
+      2,
+      "71px"
+    ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+  "selector_area_offset_exit_pop": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 1,
+    "from": [
+      2,
+      "21px"
+    ],
+    "to": [
+      2,
+      "71px"
+    ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "content_area_offset_entrance_push": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 1,
+    "from": [
+      21,
+      "21px"
+    ],
+    "to": [
+      -1,
+      "21px"
+    ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "content_area_offset_entrance_pop": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 1,
+    "from": [
+      21,
+      "21px"
+    ],
+    "to": [
+      -1,
+      "21px"
+    ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+  "content_area_offset_exit_push": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 1,
+    "from": [
+      -1,
+      "21px"
+    ],
+    "to": [
+      21,
+      "21px"
+    ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+  "content_area_offset_exit_pop": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 1,
+    "from": [
+      -1,
+      "21px"
+    ],
+    "to": [
+      21,
+      "71px"
+    ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "selector_area": {
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@settings_common.selector_area_offset_entrance_push",
+      "@settings_common.selector_area_offset_entrance_pop",
+      "@settings_common.selector_area_offset_exit_push",
+      "@settings_common.selector_area_offset_exit_pop"
+    ]
+  },
+  "content_area": {
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@settings_common.content_area_offset_entrance_push",
+      "@settings_common.content_area_offset_entrance_pop",
+      "@settings_common.content_area_offset_exit_push",
+      "@settings_common.content_area_offset_exit_pop"
+    ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "black_background@minerain_common.image": {
+              "size": [
+                "100%+6.5px",
+                "100%+0.5px"
+              ],
+              "offset": [
+                "-2.1px",
+                "0.3px"
+              ],
+              "anchor_from": "bottom_middle",
+              "anchor_to": "bottom_middle",
+              "texture": "textures/MineRain/black",
+              "visible": "(not $is_pregame)",
+              "alpha": 0.3,
+              "layer": -1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "section_title_label": {
+    "font_type": "$default_font"
+  },
+  "dialog_title_label": {
+    "font_type": "$default_font"
+  },
+  "option_dropdown_control_button_mode": {
+    "type": "panel",
+    "$option_dropdown_size|default": [
+      "100%",
+      30
+    ],
+    "size": "$option_dropdown_size",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$option_label|default": "",
+    "$1_binding_name|default": "",
+    "$2_binding_name|default": "",
+    "$3_binding_name|default": "",
+    "$4_binding_name|default": "",
+    "$5_binding_name|default": "",
+    "$1_label_text|default": "",
+    "$2_label_text|default": "",
+    "$3_label_text|default": "",
+    "$4_label_text|default": "",
+    "$5_label_text|default": "",
+    "$button_mode_type|default": "0",
+    "$has_icon|default": false,
+    "$icon_texture|default": "",
+    "$1_icon_texture|default": "",
+    "$2_icon_texture|default": "",
+    "$3_icon_texture|default": "",
+    "layer": 2,
+    "$default_border_visible": false,
+    "$hover_texture_alpha": 1,
+    "$defect_texture_alpha": 1,
+    "$hover_texture_color": [
+      1,
+      1,
+      1
+    ],
+    "$hover_border_visible": false,
+    "$default_texture_color": [
+      1,
+      1,
+      1
+    ],
+    "controls": [
+      {
+        "0_button_panel": {
+          "type": "stack_panel",
+          "visible": "($button_mode_type = '0')",
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "1@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "100%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "none",
+                "$button_text": "Thanks for the Mintraspberry"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "1_button_panel": {
+          "type": "stack_panel",
+          "visible": "($button_mode_type = '1')",
+          "orientation": "horizontal",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "1@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size|default": [
+                  "100%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$1_binding_name",
+                "$button_text": "$1_label_text"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "2_button_panel": {
+          "type": "stack_panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "visible": "($button_mode_type = '2')",
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "1@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "50%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$1_binding_name",
+                "$button_text": "$1_label_text"
+              }
+            },
+            {
+              "2@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "fill",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$2_binding_name",
+                "$button_text": "$2_label_text"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "3_button_panel": {
+          "type": "stack_panel",
+          "visible": "($button_mode_type = '3')",
+          "orientation": "horizontal",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "1@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "33.3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$1_binding_name",
+                "$button_text": "$1_label_text"
+              }
+            },
+            {
+              "2@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "33.3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$2_binding_name",
+                "$button_text": "$2_label_text"
+              }
+            },
+            {
+              "3@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "fill",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$3_binding_name",
+                "$button_text": "$3_label_text"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "4_button_panel": {
+          "type": "stack_panel",
+          "visible": "($button_mode_type = '4')",
+          "orientation": "horizontal",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "1@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "25%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$1_binding_name",
+                "$button_text": "$1_label_text"
+              }
+            },
+            {
+              "2@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "25%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$2_binding_name",
+                "$button_text": "$2_label_text"
+              }
+            },
+            {
+              "3@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "25%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$3_binding_name",
+                "$button_text": "$3_label_text"
+              }
+            },
+            {
+              "4@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "25%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$4_binding_name",
+                "$button_text": "$4_label_text"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "5_button_panel": {
+          "type": "stack_panel",
+          "visible": "($button_mode_type = '5')",
+          "orientation": "horizontal",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "1@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "20%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$1_binding_name",
+                "$button_text": "$1_label_text"
+              }
+            },
+            {
+              "2@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "20%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$2_binding_name",
+                "$button_text": "$2_label_text"
+              }
+            },
+            {
+              "3@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "20%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$3_binding_name",
+                "$button_text": "$3_label_text"
+              }
+            },
+            {
+              "4@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "20%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$4_binding_name",
+                "$button_text": "$4_label_text"
+              }
+            },
+            {
+              "5@settings_common.radio_with_label_button_mode": {
+                "$dropdown_button_size": [
+                  "20%",
+                  "100%"
+                ],
+                "$toggle_state_binding_name": "$5_binding_name",
+                "$button_text": "$5_label_text"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "option_generic_core/two_line_layout/option_label_panel/option_label": {
+    "font_type": "$default_font"
+  },
+  "option_generic_core/one_line_layout/option_label": {
+    "font_type": "$default_font"
+  },
+  "radio_with_label_button_mode": {
+    "type": "panel",
+    "size": "$dropdown_button_size",
+    "$dropdown_button_size|default": [
+      "100%",
+      "100%"
+    ],
+    "$enabled|default": true,
+    "controls": [
+      {
+        "radio_with_label_core_button_mode@settings_common.radio_with_label_core_button_mode": {}
+      }
+    ]
+  },
+  "toggle_checked": {
+    "type": "image",
+    "texture": "textures/MineRain/white",
+    "alpha": 0.5,
+    "size": "$button_image_size",
+    "$text_color": [
+      0,
+      0,
+      0
+    ],
+    "$blue_visible": true,
+    "controls": [
+      {
+        "option_toggle_on_off_label": {
+          "type": "label",
+          "alpha": 1,
+          "text": "$button_text",
+          "max_size": [
+            "100%-4px",
+            "100%px"
+          ],
+          "font_type": "$default_font",
+          "text_alignment": "center",
+          "layer": 7,
+          "color": "$text_color"
+        }
+      },
+      {
+        "option_toggle_on_blue": {
+          "type": "image",
+          "size": [
+            "100%",
+            2
+          ],
+          "layer": 7,
+          "visible": "$blue_visible",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "alpha": 1,
+          "texture": "textures/MineRain/blue_hover"
+        }
+      }
+    ]
+  },
+  "toggle_checked_hover@settings_common.toggle_checked": {
+    "texture": "textures/MineRain/white_hover"
+  },
+  "checked_locked@settings_common.unchecked_locked": {
+    "alpha": 0.8,
+    "$blue_visible": true
+  },
+  "unchecked_locked@settings_common.toggle_checked": {
+    "texture": "textures/MineRain/red",
+    "alpha": 0.5,
+    "$text_color": [
+      1,
+      1,
+      1
+    ],
+    "$blue_visible": false
+  },
+  "radio_with_label_core_button_mode@common.radio_toggle": {
+    "$button_image_size": [
+      "100%-1.0px",
+      "100%"
+    ],
+    "$unchecked_locked_control|default": "settings_common.unchecked_locked",
+    "$unchecked_locked_hover_control|default": "settings_common.unchecked_locked",
+    "$checked_locked_control|default": "settings_common.checked_locked",
+    "$checked_locked_hover_control|default": "settings_common.checked_locked",
+    "$locked_texture|default": "textures/MineRain/50_png/red_50",
+    "$unchecked_control|default": "common_toggles.toggle_unchecked",
+    "$checked_control|default": "settings_common.toggle_checked",
+    "$unchecked_hover_control|default": "common_toggles.toggle_unchecked_hover",
+    "$checked_hover_control|default": "settings_common.toggle_checked_hover",
+    "$default_texture|default": "textures/MineRain/black",
+    "$hover_texture|default": "textures/MineRain/white",
+    "$pressed_texture|default": "textures/MineRain/black_hover",
+    "$pressed_no_hover_texture": "textures/MineRain/white_hover",
+    "$default_texture_alpha": 0.55,
+    "$default_checked_texture_alpha|default": 0.55,
+    "$hover_texture_alpha": 0.43,
+    "$hover_checked_texture_alpha": 0.43,
+    "$default_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$hover_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$default_checked_text_color": "$black_text_color",
+    "$hover_checked_text_color": "$black_text_color",
+    "$default_texture_color|default": "$f_color_format",
+    "$default_checked_texture_color|default": "$f_color_format",
+    "$hover_texture_color|default": "$f_color_format",
+    "$hover_checked_texture_color|default": "$f_color_format",
+    "$default_text_color|default": "",
+    "$hover_text_color|default": "",
+    "$default_checked_text_color|default": "",
+    "$hover_checked_text_color|default": "",
+    "$default_glyph_color|default": "",
+    "$hover_glyph_color|default": "",
+    "$default_checked_glyph_color|default": "",
+    "$hover_checked_glyph_color|default": "",
+    "$checked_image|default": "common.base_screen_empty_panel",
+    "$unchecked_image|default": "common.base_screen_empty_panel",
+    "$default_border_visible|default": true,
+    "$hover_border_visible|default": true,
+    "$default_border_color": "",
+    "$hover_border_color": "",
+    "$locked_alpha": 1,
+    "$button_type_panel": "common_buttons.new_ui_binding_button_label",
+    "$button_offset|default": [
+      0,
+      0
+    ],
+    "$button_text_max_size": [
+      "100%",
+      "100%"
+    ],
+    "$button_text|default": "",
+    "$pressed_alpha|default": 1,
+    "$button_text_binding_type|default": "none",
+    "$button_text_grid_collection_name|default": "",
+    "$button_binding_condition|default": "none",
+    "$radio_toggle_group": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$toggle_name|default": "$toggle_state_binding_name",
+    "$toggle_enabled_binding_name": "$option_enabled_binding_name",
+    "enabled": "$enabled",
+    "$toggle_enabled_binding_type": "global",
+    "variables": [
+      {
+        "requires": "(not $option_enabled_binding_name or not $enabled)",
+        "$toggle_enabled_binding_name": "#not_data_bound",
+        "$toggle_enabled_binding_type": "none"
+      }
+    ]
+  }
+}

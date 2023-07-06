@@ -1,0 +1,45 @@
+/*---------------------%%%%%%%---------------------*/             {
+/*--------------------Armament©--------------------*/
+/*Copyright 2019-2022 Armament All Rights Reserved.*/
+/*---------------------%%%%%%%---------------------*/
+/*-------------------------------------------------*/
+    "light_template_toggle": {
+        "$default_texture|default": "textures/MineRain/black",
+        "$hover_texture|default": "textures/MineRain/white",
+        "$pressed_texture|default": "textures/MineRain/blue_hover",
+        "$pressed_no_hover_texture|default": "textures/MineRain/blue_hover",
+        "$default_text_color|default": [ 1, 1, 1],
+        "$hover_text_color|default": [
+            1,
+            1,
+            0
+        ],
+        "$default_checked_text_color|default": "$black_text_color",
+        "$hover_checked_text_color|default": [
+            1,
+            1,
+            0
+        ],
+        "$hover_border_visible":false,
+        "$default_border_visible":false
+    },
+    "dark_ui_toggle_collection@common_toggles.light_ui_toggle_collection": {
+        "$default_texture|default": "textures/MineRain/black",
+        "$hover_texture|default": "textures/MineRain/white",
+        "$pressed_texture|default": "textures/MineRain/blue_hover",
+        "$pressed_no_hover_texture|default": "textures/MineRain/blue_hover",
+
+        "$default_text_color|default": [ 1, 1, 1],
+        "$hover_text_color|default": [
+            1,
+            1,
+            0
+        ],
+        "$default_checked_text_color|default": "$black_text_color",
+        "$hover_checked_text_color|default": [
+            1,
+            1,
+            0
+        ]
+  }
+}

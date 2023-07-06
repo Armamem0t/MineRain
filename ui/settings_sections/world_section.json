@@ -1,0 +1,171 @@
+/*---------------------%%%%%%%---------------------*/             {
+/*--------------------Armament©--------------------*/
+/*Copyright 2019-2022 Armament All Rights Reserved.*/
+/*---------------------%%%%%%%---------------------*/
+/*-------------------------------------------------*/
+    "namespace": "world_section",
+    //Thanks for Mintraspberry
+    //option dropdown buttons
+    "multiplayer_section/xbl_settings_dropdown": {
+        "$control_name": "settings_common.option_dropdown_control_button_mode",
+        "$button_mode_type": "3",
+        "$1_binding_name": "#xbl_broadcast_invite_only",
+        "$2_binding_name": "#xbl_broadcast_friends_only",
+        "$3_binding_name": "#xbl_broadcast_friends_of_friends",
+        "$1_label_text": "options.xboxliveBroadcast.inviteOnly",
+        "$2_label_text": "options.xboxliveBroadcast.friendsOnly",
+        "$3_label_text": "options.xboxliveBroadcast.friendsOfFriends"
+    },
+    "multiplayer_section/platform_settings_dropdown": {
+        "$control_name": "settings_common.option_dropdown_control_button_mode",
+        "$button_mode_type": "3",
+        "$1_binding_name": "#platform_broadcast_invite_only",
+        "$2_binding_name": "#platform_broadcast_friends_only",
+        "$3_binding_name": "#platform_broadcast_friends_of_friends",
+        "$1_label_text": "options.xboxliveBroadcast.inviteOnly",
+        "$2_label_text": "options.xboxliveBroadcast.friendsOnly",
+        "$3_label_text": "options.xboxliveBroadcast.friendsOfFriends"
+    },
+    "game_section/option_dropdown_permissions": {
+        "$focus_override_right": "",
+        "$control_name": "settings_common.option_dropdown_control_button_mode",
+        "$button_mode_type": "3",
+        "$1_binding_name": "#permission_level_radio_visitor",
+        "$2_binding_name": "#permission_level_radio_member",
+        "$3_binding_name": "#permission_level_radio_operator",
+        "$1_label_text": "permissions.level.visitor",
+        "$2_label_text": "permissions.level.member",
+        "$3_label_text": "permissions.level.operator"
+    },
+    "game_section/option_dropdown_3": {
+        "$focus_override_right": "",
+        "$control_name": "settings_common.option_dropdown_control_button_mode",
+        "$button_mode_type": "3",
+        "$1_binding_name": "#world_type_radio_flat",
+        "$2_binding_name": "#world_type_radio_infinite",
+        "$3_binding_name": "#world_type_radio_old",
+        "$1_label_text": "generator.flat",
+        "$2_label_text": "generator.infinite",
+        "$3_label_text": "generator.old"
+    },
+    "game_section/option_dropdown_2": {
+        "$focus_override_right": "",
+        "$control_name": "settings_common.option_dropdown_control_button_mode",
+        "$button_mode_type": "4",
+        "$1_binding_name": "#world_difficulty_radio_peaceful",
+        "$2_binding_name": "#world_difficulty_radio_easy",
+        "$3_binding_name": "#world_difficulty_radio_normal",
+        "$4_binding_name": "#world_difficulty_radio_hard",
+        "$1_label_text": "options.difficulty.peaceful",
+        "$2_label_text": "options.difficulty.easy",
+        "$3_label_text": "options.difficulty.normal",
+        "$4_label_text": "options.difficulty.hard"
+    },
+    "game_section/option_dropdown_1": {
+        "$focus_override_right": "",
+        "$control_name": "settings_common.option_dropdown_control_button_mode",
+        "$button_mode_type": "4",
+        "$1_binding_name": "#player_game_mode_radio_default",
+        "$2_binding_name": "#player_game_mode_radio_survival",
+        "$3_binding_name": "#player_game_mode_radio_creative",
+        "$4_binding_name": "#player_game_mode_radio_adventure",
+        "$1_label_text": "createWorldScreen.gameMode.serverDefault",
+        "$2_label_text": "createWorldScreen.gameMode.survival",
+        "$3_label_text": "createWorldScreen.gameMode.creative",
+        "$4_label_text": "createWorldScreen.gameMode.adventure"
+    },
+    "game_section/option_dropdown_0": {
+        "$focus_override_right": "",
+        "$control_name": "settings_common.option_dropdown_control_button_mode",
+        "$button_mode_type": "3",
+        "$1_binding_name": "#world_game_mode_radio_survival",
+        "$2_binding_name": "#world_game_mode_radio_creative",
+        "$3_binding_name": "#world_game_mode_radio_adventure",
+        "$1_label_text": "createWorldScreen.gameMode.survival",
+        "$2_label_text": "createWorldScreen.gameMode.creative",
+        "$3_label_text": "createWorldScreen.gameMode.adventure"
+    },
+    //world photo border
+    "selector_pane_content/world_snapshot_image/thumbnail/border": {
+        "visible": false//delete photo border
+    },
+    
+    //achievementsDisabled
+    "game_section/option_info_label": {
+        "ignored": true//delete original edition achievementsDisabled
+    },
+    "play_or_create_stack_bedrock/play_on_realm_button":{"variables": []},
+    "game_section": {
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "achievementsDisabled_label": {
+                            "type": "panel",
+                            "size": [
+                                "100%",
+                                "100%c"
+                            ],
+                            "bindings": [
+                                {
+                                    "binding_name": "#achievment_warning_visible",
+                                    "binding_name_override": "#visible"
+                                }
+                            ],
+                            "controls": [
+                                {
+                                    "fill": {
+                                        "type": "panel",
+                                        "size": [
+                                            "100%",
+                                            5
+                                        ]
+                                    }
+                                },
+                                {
+                                    "text_panel": {
+                                        "type": "image",
+                                        "layer": 1,
+                                        "texture": "textures/ui/Black",
+                                        "alpha": 0.5,
+                                        "size": [
+                                            "100%",
+                                            "100%c+5px"
+                                        ],
+                                        "controls": [
+                                            {
+                                                "label": {
+                                                    "type": "label",
+                                                    "layer": 2,
+                                                    "font_type": "$default_font",
+                                                    "max_size": ["100%-8px","100%c"],
+                                                    "text": "#achievement_warning_text",//customize the achievementsDisabled
+                                                    "bindings": [
+                                                        {
+                                                            "binding_name": "#achievement_warning_text"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "fill_t": {
+                                        "type": "panel",
+                                        "size": [
+                                            "100%",
+                                            5
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

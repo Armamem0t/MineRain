@@ -1,0 +1,23 @@
+/*---------------------%%%%%%%---------------------*/             {
+/*--------------------Armament©--------------------*/
+/*Copyright 2019-2022 Armament All Rights Reserved.*/
+/*---------------------%%%%%%%---------------------*/
+/*-------------------------------------------------*/
+    "store_top_bar": {
+        "texture": "textures/MineRain/black",
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "alpha": 0.5
+    },
+	"spinner_animation":{
+    "frame_count": 7,
+    "frame_step": 7,
+    "reversible": true,
+    "easing": "out_back"
+	},
+	"progress_loading_spinner":{
+    "uv_size": [ 6, 3 ],
+    "size": [ 24, 12 ],
+    "texture": "textures/MineRain/longing_bar_and_pin"
+	}
+}

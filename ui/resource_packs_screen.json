@@ -1,0 +1,86 @@
+{
+  "resource_packs_toggle_button_control/cycling_icon": {
+    "fill": true
+  },
+  "selected_stack_panel/top_panel": {
+    "controls": [
+      {
+        "header_control@resource_packs.header_control_toggle": {}
+      }
+    ]
+  },
+  "header_control_toggle@settings_common.option_toggle": {
+    "$option_label": "resourcePack.header.level",
+    "$option_binding_name": "#force_user_agreement_level",
+    "$toggle_state_binding_name": "#force_user_agreement_level",
+    "$option_enabled_binding_name": "#force_user_agreement_level_enabled",
+    "$toggle_name": "force_user_agreement_level"
+  },
+  "resource_packs_toggle_button_control/tab_button_text": {
+    "font_type": "$default_font",
+    "anchor_from": "",
+    "anchor_to": "",
+    "offset": [],
+    "alpha": 1
+  },
+  "input_button_panel": {
+    "modifications": [
+      {
+        "control_name": "background",
+        "operation": "remove"
+      }
+    ]
+  },
+  "selected_pack_movement_button@common_buttons.light_content_button": {},
+  "input_button_panel/border_image": {
+    "texture": "textures/MineRain/black",
+    "alpha": 0.15
+  },
+  "gray_label": {
+    "font_type": "$default_font"
+  },
+  "gray_image": {
+    "visible": false
+  },
+  "white_label": {
+    "font_type": "$default_font"
+  },
+  "selected_pack_movement_button": {
+    "$default_button_texture": "textures/MineRain/white",
+    "$hover_button_texture": "textures/MineRain/black"
+  },
+  "resource_packs_section_toggle_base": {
+    "$button_content_size": [
+      "100%",
+      "100%"
+    ],
+    "$button_image_size": [
+      "100%",
+      "100%"
+    ],
+    "$button_size_override": [
+      "100%",
+      "100%"
+    ]
+  },
+  "icon_image": {
+    "fill": true
+  },
+  "resource_packs_toggle_button_control": {
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "toggle_button_on_blue@settings_common.toggle_button_on_blue": {}
+          }
+        ]
+      }
+    ]
+  }
+}

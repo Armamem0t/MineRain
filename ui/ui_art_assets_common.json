@@ -1,0 +1,14 @@
+/*---------------------%%%%%%%---------------------*/             {
+/*--------------------Armament©--------------------*/
+/*Copyright 2019-2022 Armament All Rights Reserved.*/
+/*---------------------%%%%%%%---------------------*/
+/*--------------------common-art-------------------*/
+
+
+    "namespace": "common_art",
+    "minerain_title@minerain_common.image":{
+        "texture": "textures/MineRain/title",
+        "$size_y|default":"100%",
+        "size": ["486.56716%y","$size_y"]
+    }
+}

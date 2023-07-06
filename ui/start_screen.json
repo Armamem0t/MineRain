@@ -1,0 +1,821 @@
+{
+  "namespace": "start",
+  "start_screen": {
+    "$black_background": true,
+    "$screen_content": "start.start_screen_base_content"
+  },
+  "start_screen_base_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "start_screen_base_content": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "popup_dialog_factory": {
+                "type": "factory",
+                "control_ids": {
+                  "cloud_upload_prompt": "@start.cloud_upload_prompt"
+                }
+              }
+            },
+            {
+              "background_panel": {
+                "type": "panel",
+                "controls": [
+                  {
+                    "screen_background@start.screen_background": {}
+                  }
+                ]
+              }
+            },
+            {
+              "base_screen_stack_panel@common.vertical_stack_panel": {
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "store_top_bar@common_store.store_top_bar": {
+                      "controls": [
+                        {
+                          "back_button@minerain_common.back_top_bar": {
+                            "$is_bg_black": true
+                          }
+                        },
+                        {
+                          "title@start.title_panel_anims": {
+                            "type": "label",
+                            "text": "menu.play",
+                            "layer": 20,
+                            "font_type": "$default_font"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "screen_controls@start.start_content_base_screen": {
+                      "size": [
+                        "100%",
+                        "fill"
+                      ],
+                      "type": "panel"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "start_panel_vewn",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "player_card": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      {
+        "horizontal_stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [
+            "100%-4px",
+            "100%-4px"
+          ],
+          "controls": [
+            {
+              "gamer_icon_panel": {
+                "size": [
+                  "100%y",
+                  "100%"
+                ],
+                "type": "panel",
+                "controls": [
+                  {
+                    "gamerpic": {
+                      "type": "image",
+                      "size": [
+                        "100%y",
+                        "100%"
+                      ],
+                      "layer": 5,
+                      "bindings": [
+                        {
+                          "binding_name": "#gamerpic_texture_path",
+                          "binding_name_override": "#texture"
+                        },
+                        {
+                          "binding_name": "#gamerpic_texture_location_type",
+                          "binding_name_override": "#texture_file_system"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "piddling_1": {
+                "type": "panel",
+                "size": [
+                  "2px",
+                  "2px"
+                ]
+              }
+            },
+            {
+              "name_and_button": {
+                "type": "stack_panel",
+                "size": [
+                  "fill",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "name": {
+                      "type": "panel",
+                      "size": [
+                        "100%",
+                        "fill"
+                      ],
+                      "controls": [
+                        {
+                          "name_text": {
+                            "type": "label",
+                            "font_type": "$default_font",
+                            "layer": 5,
+                            "text": "#text",
+                            "bindings": [
+                              {
+                                "binding_name": "#playername",
+                                "binding_name_override": "#text"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "button": {
+                      "type": "panel",
+                      "$button_image_size": [
+                        "100%",
+                        "100%"
+                      ],
+                      "size": [
+                        "100%",
+                        "50%"
+                      ],
+                      "controls": [
+                        {
+                          "hyperlink_content_button@common_buttons.light_text_button": {
+                            "$pressed_button_name": "button.menu_open_uri",
+                            "size": [
+                              "100%",
+                              "100%"
+                            ],
+                            "$button_text": "accessibility.start.feedback",
+                            "bindings": [
+                              {
+                                "binding_name": "#feedback_visible",
+                                "binding_name_override": "#visible"
+                              }
+                            ],
+                            "property_bag": {
+                              "#hyperlink": "https://aka.ms/minecraftfb"
+                            }
+                          }
+                        },
+                        {
+                          "sinin_button@common_buttons.light_text_button": {
+                            "size": [
+                              "100%",
+                              "100%"
+                            ],
+                            "$pressed_button_name": "button.signin",
+                            "$button_text": "xbox.signin",
+                            "bindings": [
+                              {
+                                "binding_name": "#sign_in_visible",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "screen_background": {
+    "type": "panel",
+    "controls": [
+      {
+        "setting_background_blur_left_top_fill@settings_common.setting_background_blur_left_top_fill": {
+          "visible": true,
+          "layer": -7
+        }
+      },
+      {
+        "setting_background_blur_left@start.setting_background_blur_left": {}
+      },
+      {
+        "screen_background_all@start.screen_background_all": {}
+      }
+    ]
+  },
+  "setting_background_blur_left@minerain_common.screen_clips_children": {
+    "$clips_offset": [
+      "-100%+224px",
+      "0%"
+    ],
+    "layer": -9,
+    "$not_gaussian_blur": false,
+    "$image_offset": [
+      "100%-224px",
+      "-0%"
+    ]
+  },
+  "screen_background_all@minerain_common.screen_clips_children": {
+    "$clips_offset": [
+      "-0%",
+      "-0%"
+    ],
+    "layer": -10,
+    "$not_gaussian_blur": true,
+    "$image_offset": [
+      "0%",
+      "0%"
+    ]
+  },
+  "start_template_button@common_buttons.light_text_button": {
+    "size": [
+      "100%",
+      20
+    ],
+    "$button_image_size": [
+      "100%",
+      "100%-1px"
+    ]
+  },
+  "start_template_button_half@common_buttons.light_text_button": {},
+  "start_template_button_2@common.horizontal_stack_panel": {
+    "size": [
+      "100%",
+      "20px"
+    ],
+    "$button_image_size": [
+      "100%",
+      "100%-1px"
+    ],
+    "$button_1_name|default": "",
+    "$button_text_1|default": "",
+    "$pressed_button_name_1|default": "",
+    "$button_bindings_1|default": "",
+    "$button_2_name|default": "",
+    "$button_text_2|default": "",
+    "$pressed_button_name_2|default": "",
+    "$button_bindings_2|default": "",
+    "controls": [
+      {
+        "$button_1_name@start.start_template_button_half": {
+          "$pressed_button_name": "$pressed_button_name_1",
+          "$button_text": "$button_text_1",
+          "bindings": "$button_bindings_1",
+          "size": [
+            "50%-0.5px",
+            20
+          ]
+        }
+      },
+      {
+        "piddling_1": {
+          "type": "panel",
+          "size": [
+            "fill",
+            "1px"
+          ]
+        }
+      },
+      {
+        "$button_2_name@start.start_template_button_half": {
+          "$pressed_button_name": "$pressed_button_name_2",
+          "$button_text": "$button_text_2",
+          "bindings": "$button_bindings_2",
+          "size": [
+            "50%-0.5px",
+            20
+          ]
+        }
+      }
+    ]
+  },
+  "button_panel@common.vertical_stack_panel": {
+    "size": [
+      "100%-1px",
+      "100%c"
+    ],
+    "controls": [
+      {
+        "play_button@start.start_template_button": {
+          "$pressed_button_name": "$play_button_target",
+          "$button_text": "menu.play"
+        }
+      },
+      {
+        "setting_button@start.start_template_button": {
+          "$pressed_button_name": "button.menu_settings",
+          "$button_text": "menu.settings"
+        }
+      },
+      {
+        "profile_button@start.start_template_button": {
+          "$pressed_button_name": "button.menu_skins",
+          "$button_text": "profileScreen.header"
+        }
+      },
+      {
+        "store_achievement_two_button@start.start_template_button_2": {
+          "$button_1_name": "store",
+          "$button_text_1": "menu.store",
+          "$pressed_button_name_1": "button.menu_store",
+          "$button_2_name": "achievement",
+          "$button_text_2": "stats.tooltip.type.achievement",
+          "$pressed_button_name_2": "button.menu_achievements",
+          "$button_bindings_1": [
+            {
+              "binding_name": "(not #marketplace_disabled)",
+              "binding_name_override": "#enabled"
+            }
+          ]
+        }
+      },
+      {
+        "menu_exit@start.start_template_button": {
+          "$pressed_button_name": "button.menu_exit",
+          "$button_text": "progressScreen.dialog.button.leave"
+        }
+      }
+    ]
+  },
+  "horizontal_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal"
+  },
+  "vertical_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical"
+  },
+  "start_content_base_screen": {
+    "$button_control": "start.button_panel",
+    "type": "panel",
+    "controls": [
+      {
+        "contract@common.horizontal_stack_panel": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "left_middle_panel": {
+                "type": "panel",
+                "size": [
+                  "224px",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "left_middle@start.left_middle_panel_anims": {
+                      "size": [
+                        "100%-4px",
+                        "100%"
+                      ],
+                      "type": "stack_panel",
+                      "orientation": "vertical",
+                      "controls": [
+                        {
+                          "piddling_1": {
+                            "type": "panel",
+                            "size": [
+                              "2px",
+                              "2px"
+                            ]
+                          }
+                        },
+                        {
+                          "player_card@start.player_card": {
+                            "type": "image",
+                            "texture": "textures/MineRain/black",
+                            "alpha": 0.6,
+                            "size": [
+                              "100%",
+                              "45px"
+                            ]
+                          }
+                        },
+                        {
+                          "piddling_2": {
+                            "type": "panel",
+                            "size": [
+                              "100%",
+                              "fill"
+                            ],
+                            "controls": [
+                              {
+                                "stack_panel@common.vertical_stack_panel": {
+                                  "size": [
+                                    "100%",
+                                    "100%c"
+                                  ],
+                                  "controls": [
+                                    {
+                                      "title@common_art.minerain_title": {
+                                        "size": [
+                                          "100%",
+                                          30
+                                        ],
+                                        "offset": [
+                                          0,
+                                          0
+                                        ],
+                                        "layer": 3
+                                      }
+                                    },
+                                    {
+                                      "piddling_1": {
+                                        "type": "panel",
+                                        "size": [
+                                          "5px",
+                                          "5px"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "button_panel": {
+                                        "type": "image",
+                                        "size": [
+                                          "100%",
+                                          "100%c"
+                                        ],
+                                        "texture": "textures/MineRain/black",
+                                        "alpha": 0.6,
+                                        "controls": [
+                                          {
+                                            "button_panel@$button_control": {}
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "right_middle@start.horizontal_stack_panel": {
+                "size": [
+                  "fill",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "left": {
+                      "type": "panel",
+                      "size": [
+                        "100px",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "paper_doll@start.paper_doll": {}
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "right@vertical_stack_panel": {
+                      "size": [
+                        "fill",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "right_top": {
+                            "type": "panel",
+                            "size": [
+                              "100%",
+                              "fill"
+                            ],
+                            "controls": [
+                              {
+                                "title@start.title_amins": {
+                                  "type": "image",
+                                  "layer": 1,
+                                  "size": [
+                                    "100%",
+                                    "45px"
+                                  ],
+                                  "texture": "textures/MineRain/start_title"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "stacks_panel_label_info": {
+                            "type": "panel",
+                            "size": [
+                              "100%",
+                              "100%c"
+                            ],
+                            "controls": [
+                              {
+                                "stacks_panel_label_info@start.label_panel_anims": {
+                                  "type": "stack_panel",
+                                  "orientation": "vertical",
+                                  "size": [
+                                    "100%",
+                                    "100%c"
+                                  ],
+                                  "controls": [
+                                    {
+                                      "label_ui_name@start.start_info_label": {
+                                        "text": "($clientName+' §b'+'v'+'.'+$Vacation_Number)"
+                                      }
+                                    },
+                                    {
+                                      "minecraft_vis@start.horizontal_stack_panel": {
+                                        "size": [
+                                          "100%c",
+                                          "100%cm"
+                                        ],
+                                        "controls": [
+                                          {
+                                            "minecraft@start.start_info_label": {
+                                              "text": "('minecraft'+' ')",
+                                              "size": [],
+                                              "max_size": []
+                                            }
+                                          },
+                                          {
+                                            "minecraft_version@start.start_info_label": {
+                                              "text": "#version",
+                                              "size": [],
+                                              "max_size": [],
+                                              "bindings": [
+                                                {
+                                                  "binding_name": "#version"
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "text_os@start.start_info_label": {
+                                        "text": "$text_os",
+                                        "variables": [
+                                          {
+                                            "requires": "$win10_edition",
+                                            "$text_os": "Microsoft  Windows 10"
+                                          },
+                                          {
+                                            "requires": "$is_ps4",
+                                            "$text_os": "SONY  Play Station 4"
+                                          },
+                                          {
+                                            "requires": "$is_ios",
+                                            "$text_os": "Apple  Ios"
+                                          },
+                                          {
+                                            "requires": "$osx_edition",
+                                            "$text_os": "Apple  Mac"
+                                          },
+                                          {
+                                            "requires": "$is_android",
+                                            "$text_os": "Google  Android"
+                                          },
+                                          {
+                                            "requires": "$nx_os",
+                                            "$text_os": "NX  os"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "gamepad_modes_info_mingli_copyright@minerain_common.gamepad_modes_info_mingli_copyright": {}
+                                    },
+                                    {
+                                      "game_copyright@start.start_info_label": {
+                                        "text": "menu.copyright"
+                                      }
+                                    },
+                                    {
+                                      "ui_copyright@start.start_info_label": {
+                                        "text": "$Copyright"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "start_info_label": {
+    "size": [
+      "100%",
+      "default"
+    ],
+    "max_size": [
+      "100%",
+      "default"
+    ],
+    "type": "label",
+    "text_alignment": "left",
+    "font_type": "$default_font"
+  },
+  "paper_doll@start.skin_panel_anims": {
+    "type": "custom",
+    "renderer": "paper_doll_renderer",
+    "layer": 2,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "label_panel_anims@minerain_common.screen_animations": {
+    "$anim_type": "offset_alpha",
+    "visible": "(($clientName = '§'+'4'+'M'+'§'+'c'+'i'+'§'+'6'+'n'+'§'+'e'+'e'+'§'+'a'+'R'+'§'+'b'+'a'+'§'+'5'+'i'+'§'+'a'+'n')and($Vacation_Number='§b0.2.9')and($Copyright='Copyright 2019-2022 MingLi|Armament All Rights Reserved.'))",
+    "$start_alpha_duration": 0.8,
+    "$out_alpha_duration": 0.8,
+    "$start_alpha_from": 0,
+    "$start_alpha_to": 1,
+    "$out_alpha_from": 1,
+    "$out_alpha_to": 0,
+    "$start_offset_easing": "out_cubic",
+    "$out_offset_easing": "out_cubic",
+    "$start_offset_duration": 1.5,
+    "$out_offset_duration": 1.5,
+    "$start_offset_from": [
+      -20,
+      0
+    ],
+    "$start_offset_to": [
+      0,
+      0
+    ],
+    "$out_offset_from": [
+      0,
+      0
+    ],
+    "$out_offset_to": [
+      -20,
+      0
+    ]
+  },
+  "title_amins@minerain_common.screen_animations": {
+    "$anim_type": "offset_alpha",
+    "$start_alpha_duration": 0.6,
+    "$out_alpha_duration": 0.6,
+    "$start_alpha_from": 0,
+    "$start_alpha_to": 1,
+    "$out_alpha_from": 1,
+    "$out_alpha_to": 0,
+    "$start_offset_easing": "out_cubic",
+    "$out_offset_easing": "out_cubic",
+    "$start_offset_duration": 4,
+    "$out_offset_duration": 1.5,
+    "$start_offset_from": [
+      0,
+      -40
+    ],
+    "$start_offset_to": [
+      0,
+      0
+    ],
+    "$out_offset_from": [
+      0,
+      0
+    ],
+    "$out_offset_to": [
+      0,
+      -20
+    ]
+  },
+  "left_middle_panel_anims@minerain_common.screen_animations": {
+    "$anim_type": "offset_alpha",
+    "$start_alpha_duration": 0.6,
+    "$out_alpha_duration": 0.6,
+    "$start_alpha_from": 0,
+    "$start_alpha_to": 1,
+    "$out_alpha_from": 1,
+    "$out_alpha_to": 0,
+    "$start_offset_easing": "out_cubic",
+    "$out_offset_easing": "out_cubic",
+    "$start_offset_duration": 1.5,
+    "$out_offset_duration": 1.5,
+    "$start_offset_from": [
+      0,
+      20
+    ],
+    "$start_offset_to": [
+      0,
+      0
+    ],
+    "$out_offset_from": [
+      0,
+      0
+    ],
+    "$out_offset_to": [
+      0,
+      20
+    ]
+  },
+  "skin_panel_anims@minerain_common.screen_animations": {
+    "$anim_type": "offset",
+    "$start_offset_easing": "out_cubic",
+    "$out_offset_easing": "out_cubic",
+    "$start_offset_duration": 1,
+    "$out_offset_duration": 1,
+    "$start_offset_from": [
+      0,
+      "100%"
+    ],
+    "$start_offset_to": [
+      0,
+      0
+    ],
+    "$out_offset_from": [
+      0,
+      0
+    ],
+    "$out_offset_to": [
+      0,
+      "100%"
+    ]
+  },
+  "title_panel_anims@minerain_common.screen_animations": {
+    "$anim_type": "offset",
+    "$start_offset_easing": "out_cubic",
+    "$out_offset_easing": "out_cubic",
+    "$start_offset_duration": 2,
+    "$out_offset_duration": 2,
+    "$start_offset_from": [
+      -10,
+      0
+    ],
+    "$start_offset_to": [
+      0,
+      0
+    ],
+    "$out_offset_from": [
+      0,
+      0
+    ],
+    "$out_offset_to": [
+      10,
+      0
+    ]
+  }
+}

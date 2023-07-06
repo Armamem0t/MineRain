@@ -1,0 +1,18 @@
+{
+	"namespace": "command_block",
+	"command_block_screen@common.base_screen": {
+		"$screen_content": "command_block.screen_content"
+	},
+	"screen_content": {
+		"type": "panel",
+		"controls": [
+			{
+				"main_content@command_block.command_block": {}
+			}
+		]
+	},
+	"main_content@common.vertical_stack_panel": {
+		"size":["100%","100%"],
+		"controls":[]
+	}
+}
