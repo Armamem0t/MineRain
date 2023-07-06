@@ -25,6 +25,7 @@
 - MacOS
 - Windows 10
 - Android
+- HarmonyOS
 - NXOS
 - Play_Station_4OS
 
