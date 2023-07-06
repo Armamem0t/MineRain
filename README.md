@@ -13,11 +13,8 @@
 <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/Armamem0t/MineRain?style=flat-square"></div>
 
 ##
-
-### language
-- [EN](README.md)
-- [简体中文](README_zh.md)
-
+- 不提供网易版本的使用方式
+##
 
 # MineRain
 
